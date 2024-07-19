@@ -2,7 +2,6 @@ const User = require('./User');
 const Book = require('./Book');
 const Bookclub = require('./BookClub');
 const Meeting = require('./Meeting');
-const { FOREIGNKEYS } = require('sequelize/lib/query-types');
 //requiring all files in the model folder!
 
 //Showing relationships between 
