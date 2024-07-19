@@ -1,0 +1,125 @@
+{
+    "books": [
+      {
+        "bookId": "1a2b3c",
+        "isbn": "9781593275846",
+        "title": "Eloquent JavaScript, Second Edition",
+        "subtitle": "A Modern Introduction to Programming",
+        "author": "Marijn Haverbeke",
+        "published": "2014-12-14T00:00:00.000Z",
+        "publisher": "No Starch Press",
+        "pages": 472,
+        "description": "JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+        "website": "http://eloquentjavascript.net/",
+        "genre": "Programming"
+      },
+      {
+        "bookId": "4d5e6f",
+        "isbn": "9781449331818",
+        "title": "Learning JavaScript Design Patterns",
+        "subtitle": "A JavaScript and jQuery Developer's Guide",
+        "author": "Addy Osmani",
+        "published": "2012-07-01T00:00:00.000Z",
+        "publisher": "O'Reilly Media",
+        "pages": 254,
+        "description": "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you.",
+        "website": "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/",
+        "genre": "Programming"
+      },
+      {
+        "bookId": "7g8h9i",
+        "isbn": "9781449365035",
+        "title": "Speaking JavaScript",
+        "subtitle": "An In-Depth Guide for Programmers",
+        "author": "Axel Rauschmayer",
+        "published": "2014-02-01T00:00:00.000Z",
+        "publisher": "O'Reilly Media",
+        "pages": 460,
+        "description": "Like it or not, JavaScript is everywhere these days—from browser to server to mobile—and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who once found himself in the same position.",
+        "website": "http://speakingjs.com/",
+        "genre": "Programming"
+      },
+      {
+        "bookId": "0j1k2l",
+        "isbn": "9781491950296",
+        "title": "Programming JavaScript Applications",
+        "subtitle": "Robust Web Architecture with Node, HTML5, and Modern JS Libraries",
+        "author": "Eric Elliott",
+        "published": "2014-07-01T00:00:00.000Z",
+        "publisher": "O'Reilly Media",
+        "pages": 254,
+        "description": "Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flexible and resilient code that's easier—yes, easier—to work with as your code base grows.",
+        "website": "http://chimera.labs.oreilly.com/books/1234000000262/index.html",
+        "genre": "Programming"
+      },
+      {
+        "bookId": "3m4n5o",
+        "isbn": "9781593277574",
+        "title": "Understanding ECMAScript 6",
+        "subtitle": "The Definitive Guide for JavaScript Developers",
+        "author": "Nicholas C. Zakas",
+        "published": "2016-09-03T00:00:00.000Z",
+        "publisher": "No Starch Press",
+        "pages": 352,
+        "description": "ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that ECMAScript 6 brings to JavaScript.",
+        "website": "https://leanpub.com/understandinges6/read",
+        "genre": "Programming"
+      },
+      {
+        "bookId": "6p7q8r",
+        "isbn": "9780061120084",
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960-07-11T00:00:00.000Z",
+        "publisher": "J.B. Lippincott & Co.",
+        "pages": 281,
+        "description": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it.",
+        "genre": "Fiction"
+      },
+      {
+        "bookId": "9s0t1u",
+        "isbn": "9780451524935",
+        "title": "1984",
+        "author": "George Orwell",
+        "published": "1949-06-08T00:00:00.000Z",
+        "publisher": "Secker & Warburg",
+        "pages": 328,
+        "description": "A dystopian social science fiction novel and cautionary tale about the dangers of totalitarianism.",
+        "genre": "Science Fiction"
+      },
+      {
+        "bookId": "2v3w4x",
+        "isbn": "9780439139601",
+        "title": "Harry Potter and the Goblet of Fire",
+        "author": "J.K. Rowling",
+        "published": "2000-07-08T00:00:00.000Z",
+        "publisher": "Bloomsbury",
+        "pages": 636,
+        "description": "The fourth book in the Harry Potter series, where Harry competes in the Triwizard Tournament.",
+        "genre": "Fantasy"
+      },
+      {
+        "bookId": "5y6z7a",
+        "isbn": "9780307474278",
+        "title": "The Road",
+        "author": "Cormac McCarthy",
+        "published": "2006-09-26T00:00:00.000Z",
+        "publisher": "Alfred A. Knopf",
+        "pages": 287,
+        "description": "A post-apocalyptic novel that follows a father and son as they journey through a desolate America.",
+        "genre": "Post-Apocalyptic"
+      },
+      {
+        "bookId": "8b9c0d",
+        "isbn": "9780140449136",
+        "title": "The Odyssey",
+        "author": "Homer",
+        "published": "800-01-01T00:00:00.000Z",
+        "publisher": "Penguin Classics",
+        "pages": 541,
+        "description": "An epic poem that tells the story of Odysseus's ten-year journey home after the Trojan War.",
+        "genre": "Classics"
+      }
+    ]
+  }
+  
