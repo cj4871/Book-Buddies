@@ -21,3 +21,20 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+// POST request to /api/users/login to check if login matches database, and logs them in.
+router.post('/login', async (req, res) => {
+  try {
+    // looks for matching email in the database
+    const userData = await User.findOne({ where: { email: req.body.email }});
+    // if there's no match....
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password. Please try again.'});
+      return;
+    }
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
