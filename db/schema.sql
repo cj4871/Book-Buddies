@@ -1,0 +1,3 @@
+DELETE DATABASE IF EXISTS books_app_db;
+
+CREATE DATABASE books_app_db;
