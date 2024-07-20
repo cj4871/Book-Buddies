@@ -16,7 +16,7 @@ User.belongsTo(Bookclub,{
 User.hasMany(Bookclub, {
     foreignKey:'BookClub_id'
 })
-Bookclub.belongsTo(User {
+Bookclub.belongsTo(User, {
     foreignKey:'BookClub_id'
 })
 // meeting to bookclub
@@ -29,5 +29,5 @@ User.belongsTo(Bookclub,{
 });
 //book to user
 
-
+//export 
 module.exports = { User, Book, Bookclub, Meeting };
