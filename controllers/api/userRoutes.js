@@ -5,6 +5,14 @@ const router = require('express').Router();
 // Import the user model, which is in the models folder.
 const { User } = require('../../models');
 
+// this is just here as a test
+router.get('/', async (req, res) => {
+  res.send(`You're on controllers/api/userRoutes`);
+  console.log('a thing')
+});
+
+
+
 // POST request to /api/users to create a new user, and save the user id and logged in state to the session
 router.post('/', async (req, res) => {
   try {
