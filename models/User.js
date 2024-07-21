@@ -1,4 +1,70 @@
-const {Model} = require('sequelize')
+const {Model, DataTypes} = require('sequelize')
 const sequelize = require('../config/connection')
 
-class User extends Model {};
+
+class User extends Model {
+    // Validates the password
+    checkPassword(loginPw) {
+      return bcrypt.compareSync(loginPw, this.password);
+    }
+  };
+// Definiton for User model 
+User.init(
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+          },
+        first_name:{ 
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        last_name:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        email:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        password:{
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [6],
+            },
+        },
+        book_club_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Bookclub',
+                key: 'id',
+            },
+        },
+        book_id:{
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'Book',
+            key: 'id',
+            },
+        },
+    },
+    {
+        hooks: {
+            // Hashes the users password before saving it to the DB
+          async beforeCreate(newUserData) {
+            newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            return newUserData;
+          },
+        },
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'User',
+      }
+    );
+    
+    module.exports = User;

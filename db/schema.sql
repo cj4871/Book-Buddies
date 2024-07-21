@@ -4,14 +4,14 @@ CREATE DATABASE book_buddies_db;
 
 \c book_buddies_db;
 
-
+-- Bookclub table definition
 CREATE TABLE book_club (
    id SERIAL PRIMARY KEY,
    name VARCHAR(50) UNIQUE NOT NULL,
    location VARCHAR(50) NOT NULL
 );
 
-
+-- Book tabel definition
 CREATE TABLE book (
     id SERIAL PRIMARY KEY,
     title VARCHAR(50) NOT NULL,
@@ -19,10 +19,11 @@ CREATE TABLE book (
     genre VARCHAR(50) NOT NULL,
     publication_year INTEGER,
     read VARCHAR(10),
-    user_rating INTEGER
+    user_rating INTEGER,
+    ranking INTEGER
 );
 
-
+-- User table definition
 CREATE TABLE book_user (
    id SERIAL PRIMARY KEY,
    first_name VARCHAR(50) NOT NULL,
@@ -38,7 +39,7 @@ CREATE TABLE book_user (
    REFERENCES book(id)
 );
 
-
+-- Meeting table definition
 CREATE TABLE meeting (
     id SERIAL PRIMARY KEY,
     date DATE,
