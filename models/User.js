@@ -2,35 +2,70 @@ const {Model, DataTypes} = require('sequelize')
 const sequelize = require('../config/connection')
 const Book = require('./Book')
 
-class User extends Model {};
 
-Book.init(
+class User extends Model {
+    // Validates the password
+    checkPassword(loginPw) {
+      return bcrypt.compareSync(loginPw, this.password);
+    }
+  };
+// Definiton for User model 
+User.init(
     {
-        first_name:{
-            type: DataTypes.CHAR(50),
+        id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
-        }, 
-        last_name:{
-            type: DataTypes.CHAR(50),
-            allowNull: false,
-        }, 
-        email:{
-            type: DataTypes.CHAR(50),
-            allowNull: false,
-        }, 
-        password:{
-            type: DataTypes.CHAR(50),
+            primaryKey: true,
+            autoIncrement: true,
+          },
+        first_name:{ 
+            type: DataTypes.STRING,
             allowNull: false,
         },
-        book_club_id:{
-            type: DataTypes.INTEGER(50),
-            allowNull: true,
+        last_name:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        email:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        password:{
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [6],
+            },
+        },
+        book_club_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Bookclub',
+                key: 'id',
+            },
         },
         book_id:{
-            type: DataTypes.INTEGER(50),
-            allowNull: true,
-        } 
-    }
-);
-
-module.exports = User;
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'Book',
+            key: 'id',
+            },
+        },
+    },
+    {
+        hooks: {
+            // Hashes the users password before saving it to the DB
+          async beforeCreate(newUserData) {
+            newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            return newUserData;
+          },
+        },
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'User',
+      }
+    );
+    
+    module.exports = User;
