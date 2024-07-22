@@ -27,14 +27,14 @@ Meeting.init(
         book_chapter: {
             type: DataTypes.INTEGER,
         },
-        book_club_id: {
+        BookClub_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'book_club',
+                model: 'BookClub',
                 key: 'id',
             },
         },
-        book_id:{
+        Book_id:{
             type: DataTypes.INTEGER,
             references: {
                 model: 'book',

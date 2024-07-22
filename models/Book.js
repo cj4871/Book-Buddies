@@ -9,9 +9,9 @@ static async calculateRanking() {
   });
   
   for (const books of books) {
-    const id = book.id;
+    const id = Book.id;
     const ratings = await this.sequelize.query(
-      `SELECT AVG (user_rating) AS average_rating FROM book_users WHERE book_id = ${id}`,
+      `SELECT AVG (user_rating) AS average_rating FROM book_users WHERE Book_id = ${id}`,
       { type: sequelize.QueryTypes.SELECT }
     );
     
@@ -59,7 +59,7 @@ Book.init(
   },
 {
   sequelize,
-  modelName: 'book',
+  modelName: 'Book',
   timestamps: false,
   }
 );
