@@ -7,8 +7,7 @@ const { User } = require('../../models');
 
 // this is just here as a test
 router.get('/', async (req, res) => {
-  res.send(`You're on controllers/api/userRoutes`);
-  console.log('a thing')
+  res.send(`You're on controllers/api/userRoutes file`);
 });
 
 
