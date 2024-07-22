@@ -27,6 +27,11 @@ static async calculateRanking() {
 //Defining Book model attributes and options
 Book.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },  
     title:{
       type: DataTypes.STRING,
       allowNull: false,
