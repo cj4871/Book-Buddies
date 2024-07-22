@@ -1,4 +1,4 @@
-const {Model} = require('sequelize')
+const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config/connection')
 
 class Meeting extends Model {};
@@ -30,14 +30,14 @@ Meeting.init(
         book_club_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'Bookclub',
+                model: 'book_club',
                 key: 'id',
             },
         },
         book_id:{
             type: DataTypes.INTEGER,
             references: {
-                model: 'Book',
+                model: 'book',
                 key: 'id',
             },
         },
