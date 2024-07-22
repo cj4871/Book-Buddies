@@ -1,6 +1,11 @@
 const router = require("express").Router();
 
-const Book = require("../../models/Book");
+const { Book } = require("../../models");
+
+// this is just here as a test
+router.get('/', async (req, res) => {
+  res.send(`You're on controllers/api/bookRoutes file`);
+});
 
 router.post("/", (req, res) => {
   Book.create({
@@ -16,3 +21,5 @@ router.post("/", (req, res) => {
       res.json(err);
     });
 });
+
+module.exports = router;
