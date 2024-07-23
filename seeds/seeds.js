@@ -11,11 +11,13 @@ const seedDatabase = async () => {
 
   await Book.bulkCreate(bookData);
 
+
   await User.bulkCreate(userData);
 
   await Meeting.bulkCreate(meetingData);
 
   await BookClub.bulkCreate(bookClubData);
+
 
   process.exit(0);
 };
