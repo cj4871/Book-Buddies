@@ -37,20 +37,20 @@ User.init(
                 len: [6],
             },
         },
-        BookClub_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'BookClub',
-                key: 'id',
-            },
-        },
-        Book_id:{
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'Book',
-            key: 'id',
-            },
-        },
+        // BookClub_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'BookClub',
+        //         key: 'id',
+        //     },
+        // },
+        // Book_id:{
+        // type: DataTypes.INTEGER,
+        // references: {
+        //     model: 'Book',
+        //     key: 'id',
+        //     },
+        // },
     },
     {
         hooks: {

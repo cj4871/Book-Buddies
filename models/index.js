@@ -30,10 +30,13 @@ User.belongsTo(BookClub, {
 });
 // User.hasMany(Book, {
 //     foreignKey:'Book_id'
-// });
-// Book.belongsTo(User, {
-//     foreignKey:'Book_id'
-// });
+// });  
+Book.hasMany(User, {
+    foreignKey:'User_id'
+})
+Book.belongsTo(User, {
+    foreignKey:'Book_id'
+});
 
 //export 
 module.exports = { User, Book, BookClub, Meeting };

@@ -27,20 +27,20 @@ Meeting.init(
         book_chapter: {
             type: DataTypes.INTEGER,
         },
-        BookClub_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'BookClub',
-                key: 'id',
-            },
-        },
-        Book_id:{
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'book',
-                key: 'id',
-            },
-        },
+        // BookClub_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'BookClub',
+        //         key: 'id',
+        //     },
+        // },
+        // Book_id:{
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'book',
+        //         key: 'id',
+        //     },
+        // },
         },
     {
         sequelize,
