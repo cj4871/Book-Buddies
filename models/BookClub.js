@@ -1,8 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-const app = express();
-
 class BookClub extends Model {};
 
 BookClub.init(

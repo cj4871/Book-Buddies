@@ -1,7 +1,3 @@
-const express = require('express');
-
-const app = express;
-
 //Route to FETCH book clubs from the DB
 app.get('/bookclubs', async (req, res) => {
   try {
