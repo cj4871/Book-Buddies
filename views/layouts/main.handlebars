@@ -9,7 +9,14 @@
 
 <body>
   <nav>
-    <h1>BookBuddies</h1>
+    <a href="/"><h1>BookBuddies</h1></a>
+        <!-- login or logout -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
   </nav>
   <main>
     {{{ body }}}
