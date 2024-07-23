@@ -7,7 +7,8 @@ const helpers = require('./utils/helpers');
 //require files from express and connection js files
 
 const app = express();
-const PORT = process.env.PORT || 5432;
+//change this back to 5432 before pushing
+const PORT = process.env.PORT || 3001;
 
 // Set up handlebars with helpers
 const hbs = exphbs.create({ helpers });
