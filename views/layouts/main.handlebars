@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Buddies</title>
+</head>
+
+<body>
+  <nav>
+    <a href="/"><h1>BookBuddies</h1></a>
+        <!-- login or logout -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+  </nav>
+  <main>
+    {{{ body }}}
+  </main>
+</body>
+
+</html>
