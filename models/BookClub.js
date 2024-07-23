@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config/connection')
 
-class Bookclub extends Model {};
+class BookClub extends Model {};
 
-Bookclub.init(
+BookClub.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -25,8 +25,8 @@ Bookclub.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Bookclub',  
+        modelName: 'BookClub',  
     }
 );
 
-module.exports = Bookclub;
+module.exports = BookClub;

@@ -37,20 +37,20 @@ User.init(
                 len: [6],
             },
         },
-        book_club_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'book_club',
-                key: 'id',
-            },
-        },
-        book_id:{
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'book',
-            key: 'id',
-            },
-        },
+        // BookClub_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'BookClub',
+        //         key: 'id',
+        //     },
+        // },
+        // Book_id:{
+        // type: DataTypes.INTEGER,
+        // references: {
+        //     model: 'Book',
+        //     key: 'id',
+        //     },
+        // },
     },
     {
         hooks: {
@@ -64,7 +64,7 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'book_user',
+        modelName: 'User',
       }
     );
     
