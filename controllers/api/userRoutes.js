@@ -75,3 +75,14 @@ router.post('/logout', (req, res) => {
 });
 
 module.exports = router;
+
+
+
+// {
+// 	"first_name": "hannah",
+// 	"last_name": "schwen",
+// 	"email": "hannahschwen@gmail.com",
+// 	"password": "password",
+// 	"book_club_id": 1,
+// 	"book_id": 1
+// }
