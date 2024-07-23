@@ -1,4 +1,5 @@
 const { Meeting } = require("../../models");
+const router = require("express").Router();
 
 router.post("/", (req, res) => {
   Meeting.create({
@@ -14,5 +15,7 @@ router.post("/", (req, res) => {
       res.json(err);
     });
 });
+
+router.get("/Metting/:id"), async (req, res) => {};
 
 module.exports = router;
