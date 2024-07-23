@@ -5,19 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Buddies</title>
+  <link>
 </head>
 
 <body>
-  <nav>
-    <a href="/"><h1>BookBuddies</h1></a>
+  <header>
+    {{!-- container for top of header --}}
+    <div> 
+      <a href="/"><div>
+        <h1>BookBuddies</h1>
+        <h2>Prose Before Bros</h2>
+      </div></a>
         <!-- login or logout -->
         {{#if logged_in}}
+        <p>Welcome, {{name}}!</p>
         <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <button id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
-  </nav>
+    </div>
+    {{!-- container for bar at bottom of header --}}
+    <div></div>
+
+  </header>
+
   <main>
     {{{ body }}}
   </main>
