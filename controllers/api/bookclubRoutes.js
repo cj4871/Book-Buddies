@@ -1,9 +1,8 @@
-const express = require('express');
-
-const app = express;
+const router = require("express").Router();
+const { BookClub } = require("../../models");
 
 //Route to FETCH book clubs from the DB
-app.get('/bookclubs', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const bookClubs = await BookClub.findAll();
     res.json(bookClubs);
@@ -14,7 +13,7 @@ app.get('/bookclubs', async (req, res) => {
 });
 
 //Route for creating NEW book club by ID
-app.post('/bookclubs', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newBookClub = await BookClub.create(req.body);
     res.status(201).json(newBookClub);
@@ -25,7 +24,7 @@ app.post('/bookclubs', async (req, res) => {
 });
 
 //Route for DELETING book club by ID
-app.delete('/bookclubs/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const deletedBookClub = BookClub.destroy({
       where: {id: req.params.id}
@@ -42,3 +41,5 @@ app.delete('/bookclubs/:id', async (req, res) => {
   res.status(500).json({error: 'Server Error'});
   }
 });
+
+module.exports = router;

@@ -47,9 +47,6 @@ Book.init(
     publication_year: {
       type: DataTypes.INTEGER,
     },
-    read: {
-      type: DataTypes.STRING,
-    },
     user_rating:{
       type: DataTypes.INTEGER,
     },

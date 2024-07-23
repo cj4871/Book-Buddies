@@ -41,6 +41,9 @@ User.init(
                 len: [6],
             },
         },
+        read: {
+          type: DataTypes.STRING,
+        },
         // BookClub_id: {
         //     type: DataTypes.INTEGER,
         //     references: {
