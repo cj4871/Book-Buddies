@@ -1,5 +1,4 @@
 // Routes for logging in and out
-// The user model is currently not set up. Make sure the keys match to this when you make it. I'm kinda working backwards atm.
 
 const router = require('express').Router();
 // Import the user model, which is in the models folder.
@@ -9,7 +8,6 @@ const { User } = require('../../models');
 router.get('/', async (req, res) => {
   res.send(`You're on controllers/api/userRoutes file`);
 });
-
 
 
 // POST request to /api/users to create a new user, and save the user id and logged in state to the session

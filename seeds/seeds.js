@@ -11,9 +11,14 @@ const seedDatabase = async () => {
 
   const books = await Book.bulkCreate(bookData, {});
 
-  for (const user of userData) {
-    await User.create({});
-  }
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
+  
+  // for (const user of userData) {
+  //   await User.create({});
+  // }
 
   process.exit(0);
 };
