@@ -1,9 +1,3 @@
-const router = require("express").Router();
-const userRoutes = require("./userRoutes");
-const bookRoutes = require("./bookRoutes");
-const bookclubRoutes = require("./bookclubRoutes");
-const meetingRoutes = require("./meetingRoutes");
-
 
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
