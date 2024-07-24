@@ -5,19 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Buddies</title>
+
+  {{!-- Stylesheets --}}
+  <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+
+  {{!-- google fonts --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
-    <a href="/"><h1>BookBuddies</h1></a>
+  <header>
+    {{!-- container for top of header --}}
+    <div class="header-top"> 
+      <a href="/"><div class="title-sub-container">
+        <h1>BookBuddies</h1>
+        <h2>Prose Before Bros</h2>
+      </div></a>
         <!-- login or logout -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-  </nav>
+        {{!-- container for login/out/welcome --}}
+        <div class="login-out-container">
+          {{#if logged_in}}
+          <p>Welcome, {{name}}!</p> <p>|</p>
+          <a href="/profile">my page</a> <p>|</p>
+          <a href="" id="logout">logout</a>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+        </div>
+    </div>
+    {{!-- container for bar at bottom of header --}}
+    <div class="header-bottom"></div>
+
+  </header>
+
   <main>
     {{{ body }}}
   </main>
