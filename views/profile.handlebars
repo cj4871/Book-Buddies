@@ -1,1 +1,31 @@
-<h1>PROFILE PAGE</h1>
+<link rel="stylesheet" type="text/css" href="/css/profile.css">
+{{!-- <h1>PROFILE PAGE</h1> --}}
+
+{{!-- section for tabs/books --}}
+<section class="books-section">
+  <!-- Tab links -->
+  <div class="tab">
+    <button class="tab-links" onclick="openTab(event, 'to-read')">To Read</button>
+    <button class="tab-links" onclick="openTab(event, 'current-read')">Currenly Reading</button>
+    <button class="tab-links" onclick="openTab(event, 'done-read')">Done Reading</button>
+  </div>
+
+  <!-- Tab content -->
+  <div id="to-read" class="tab-content">
+    <h3>Books to Read</h3>
+  </div>
+
+  <div id="current-read" class="tab-content">
+    <h3>Books Currently Reading</h3>
+  </div>
+
+  <div id="done-read" class="tab-content">
+    <h3>Books Already Read</h3>
+  </div>
+
+</section>
+
+{{!-- section for book clubs --}}
+<section class="clubs-section"></section>
+
+<script src="./js/profile.js"></script>
