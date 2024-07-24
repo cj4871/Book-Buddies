@@ -1,41 +1,39 @@
-body {
-  background-color: var(--gray-lightest);
-}
-
 main {
   display: flex;
 }
 
 .books-section {
-  flex-grow: 2;
-  /* background-color: var(--light); */
-  /* min-height: 600px; */
+  flex-grow: 1;
   margin: 0 8px;
-  /* border: 1px solid black; */
 }
 
 .clubs-section {
   flex-grow: 1;
-  background-color: var(--light);
-  min-height: 600px;
+  min-height: 500px;
   margin: 0 8px;
-  border: 1px solid black;
+  background-color: var(--light);
+  border-radius: 36px 36px 0 0;
 }
 
+.clubs-top {
+  background-color: var(--purple);
+  color: var(--light);
+  /* height: 36px; */
+  border-radius: 36px 36px 0 0;
+  padding: 10px 0 5px;
+  text-align: center;
+  font-size: 16px;
+}
 
-
-/* Style the tab */
+/* Styles for the tabs and content */
 .tabs {
-  overflow: hidden;
-
+  display: flex;
 }
 
-/* Style the buttons that are used to open the tab content */
 .tabs button {
   background-color: var(--teal2);
   float: left;
   border: none;
-  /* outline: none; */
   cursor: pointer;
   padding: 10px 36px 5px;
   transition: 0.3s;
@@ -46,22 +44,18 @@ main {
   font-size: 16px;
 }
 
-/* Change background color of buttons on hover */
 .tabs button:hover {
   background-color: #66d0ce;
 }
 
-/* Create an active/current tablink class */
 .tabs button.active {
   background-color: var(--teal1);
   color: var(--light)
 }
 
-/* Style the tab content */
 .tab-content {
   display: none;
   background-color: var(--light);
-  box-shadow: 0 0 4px #77777729;
   padding: 6px 12px;
   min-height: 500px;
 }
