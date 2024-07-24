@@ -8,3 +8,57 @@
   --gray-mid: #dde8f5;
   --yellow: #ffba49;
 }
+
+/* General Styles */
+body {
+  font-family: Jost, sans-serif;
+  font-size: 16px;
+}
+p, a {
+  margin: 4px;
+}
+h1, h2, h3, h4 {
+  font-family: Aleo, serif;
+}
+
+h1 {
+  font-size: 220%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+/* Header styles */
+header {
+  color: var(--light);
+}
+
+header h2 {
+  color: var(--teal2);
+}
+
+.header-top {
+  background-color: var(--purple);
+  padding: 20px 10%;
+  box-shadow: 0 0 5px #ff0000;
+}
+
+.title-sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-out-container {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 5%;
+}
+
+.header-bottom {
+  background-color: var(--gray-mid);
+  height: 60px;
+  z-index: -1;
+}
