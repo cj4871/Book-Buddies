@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const bookRoutes = require('./bookRoutes');
@@ -8,9 +9,9 @@ router.use('/books', bookRoutes)
 router.use('/bookclubs', bookclubRoutes)
 
 // this is just here as a test
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   res.send(`You're on api/index file`);
-  console.log('a thing')
+  console.log("a thing");
 });
 
 module.exports = router;
