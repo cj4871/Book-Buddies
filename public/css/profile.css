@@ -46,7 +46,7 @@ main {
   cursor: pointer;
 }
 
-/* Styles for the tabs and content */
+/* Styles for the tabs and content --------*/
 .tabs {
   display: flex;
 }
@@ -75,4 +75,28 @@ main {
   background-color: var(--light);
   padding: 6px 12px;
   min-height: 500px;
+}
+
+/* Book card styles -------------- */
+.book-card {
+  background-color: var(--light);
+  width: 200px;
+  border-radius: 20px;
+  border: 1px solid var(--gray-lightest);
+  margin: 10px;
+  padding-bottom: 12px;
+}
+
+.book-card img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.book-card h3, .book-card p {
+  margin: 4px 14px;
+}
+
+.book-card p {
+
 }

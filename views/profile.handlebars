@@ -9,17 +9,26 @@
     <button class="tab-links" onclick="openTab(event, 'done-read')">Done Reading</button>
   </div>
 
-  <div id="to-read" class="tab-content shadow1">
+  <section id="to-read" class="tab-content shadow1">
     <h3>Books to Read</h3>
-  </div>
 
-  <div id="current-read" class="tab-content shadow1">
+{{!-- Example Book card to be recreated for each book the user saved --}}
+    <div class="book-card shadow1">
+      <img src="./images/book-img1.png">
+      <h3>Lessons in Chemistry</h3>
+      <p>Author Name</p>
+
+    </div>
+
+  </section>
+
+  <section id="current-read" class="tab-content shadow1">
     <h3>Books Currently Reading</h3>
-  </div>
+  </section>
 
-  <div id="done-read" class="tab-content shadow1">
+  <section id="done-read" class="tab-content shadow1">
     <h3>Books Already Read</h3>
-  </div>
+  </section>
 
 </section>
 
