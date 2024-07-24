@@ -40,7 +40,7 @@ header h2 {
 
 .header-top {
   background-color: var(--purple);
-  padding: 20px 10%;
+  padding: 30px 10% 20px;
   box-shadow: 0 0 5px #ff0000;
 }
 
@@ -51,6 +51,7 @@ header h2 {
 }
 
 .login-out-container {
+  color: var(--gray-mid);
   display: flex;
   position: absolute;
   top: 10px;
@@ -59,6 +60,9 @@ header h2 {
 
 .header-bottom {
   background-color: var(--gray-mid);
-  height: 60px;
+  background-image: url(../images/dash-background.png);
+  background-size: cover;
+  background-position: 50% 0%;
+  height: 40px;
   z-index: -1;
 }
