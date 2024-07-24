@@ -1,7 +1,7 @@
 const { Meeting } = require("../../models");
 const router = require("express").Router();
 
-router.post("/meeting", (req, res) => {
+router.post("/", (req, res) => {
   Meeting.create({
     date: req.body.date,
     location: req.body.date,
@@ -16,7 +16,7 @@ router.post("/meeting", (req, res) => {
     });
 });
 
-router.get("/metting/id:", async (req, res) => {
+router.get("/id:", async (req, res) => {
   try {
     const meeting = await Meeting.findByPk();
     res.json(meeting);
@@ -26,10 +26,10 @@ router.get("/metting/id:", async (req, res) => {
   }
 });
 
-router.get("/meeting", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const meetings = await Meeting.findAll();
-    res.json(meeting);
+    res.json(meetings);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "No Meetings Found" });
