@@ -18,11 +18,32 @@ main {
 .clubs-top {
   background-color: var(--purple);
   color: var(--light);
-  /* height: 36px; */
   border-radius: 36px 36px 0 0;
-  padding: 10px 0 5px;
+  padding: 6px 0 1px;
   text-align: center;
   font-size: 16px;
+}
+
+.new-club-btn {
+  width: 100%;
+  background-color: var(--gray-mid);
+  padding: 5px;
+  transition: 0.2s;
+}
+
+.new-club-btn:hover {
+  background-color: var(--teal2);
+}
+
+.club-container {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gray-mid);
+  transition: .2s;
+}
+
+.club-container:hover {
+  background-color: var(--gray-lightest);
+  cursor: pointer;
 }
 
 /* Styles for the tabs and content */
@@ -33,15 +54,11 @@ main {
 .tabs button {
   background-color: var(--teal2);
   float: left;
-  border: none;
-  cursor: pointer;
   padding: 10px 36px 5px;
-  transition: 0.3s;
+  transition: 0.2s;
   border-radius: 36px 36px 0 0;
   margin-right: 8px;
-  font-family: jost, sans-serif;
   color: var(--dark);
-  font-size: 16px;
 }
 
 .tabs button:hover {
