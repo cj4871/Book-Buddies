@@ -46,13 +46,7 @@ router.get("/", async (req, res) => {
   try {
     const meetings = await Meeting.findAll();
     res.json(meetings);
-
-
   //getting all meetings
-  try {
-    const meeting = await Meeting.findAll();
-    res.json(meeting);
-
   } catch (err) {
     console.error(err);
     res.status(500).send("No Meetings found");
