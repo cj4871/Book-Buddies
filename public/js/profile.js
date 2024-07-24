@@ -1,3 +1,4 @@
+document.getElementById("default-open").click();
 // function to hide and show book tabs content
 function openTab(evt, readStatus) {
   const tabContent = document.getElementsByClassName("tab-content");

@@ -8,10 +8,10 @@ main {
 
 .books-section {
   flex-grow: 2;
-  background-color: var(--light);
-  min-height: 600px;
+  /* background-color: var(--light); */
+  /* min-height: 600px; */
   margin: 0 8px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .clubs-section {
@@ -25,37 +25,43 @@ main {
 
 
 /* Style the tab */
-.tab {
+.tabs {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+
 }
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
+.tabs button {
+  background-color: var(--teal2);
   float: left;
   border: none;
-  outline: none;
+  /* outline: none; */
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 10px 36px 5px;
   transition: 0.3s;
+  border-radius: 36px 36px 0 0;
+  margin-right: 8px;
+  font-family: jost, sans-serif;
+  color: var(--dark);
+  font-size: 16px;
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
+.tabs button:hover {
+  background-color: #66d0ce;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
+.tabs button.active {
+  background-color: var(--teal1);
+  color: var(--light)
 }
 
 /* Style the tab content */
 .tab-content {
   display: none;
+  background-color: var(--light);
+  box-shadow: 0 0 4px #77777729;
   padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  min-height: 500px;
 }
