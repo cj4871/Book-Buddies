@@ -44,13 +44,13 @@ User.init(
         read: {
           type: DataTypes.STRING,
         },
-        // BookClub_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'BookClub',
-        //         key: 'id',
-        //     },
-        // },
+        BookClub_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'BookClub',
+                key: 'id',
+            },
+        },
         // Book_id:{
         // type: DataTypes.INTEGER,
         // references: {
