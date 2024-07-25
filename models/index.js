@@ -34,7 +34,7 @@ User.belongsTo(BookClub, {
 Book.hasMany(User, {
   foreignKey: "User_id",
 });
-Book.belongsTo(User, {
+Book.belongsTo(BookClub, {
   foreignKey: "Book_id",
 });
 
