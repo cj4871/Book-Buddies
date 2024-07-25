@@ -10,7 +10,6 @@
   <link rel="stylesheet" type="text/css" href="/css/reset.css" />
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
 
-
   {{!-- google fonts --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +20,10 @@
   <header>
     {{!-- container for top of header --}}
     <div class="header-top"> 
-      <a href="/" class="title-sub-container">
+      <a href="/"><div class="title-sub-container">
         <h1>BookBuddies</h1>
         <h2>Prose Before Bros</h2>
-      </a>
+      </div></a>
         <!-- login or logout -->
         {{!-- container for login/out/welcome --}}
         <div class="login-out-container">
@@ -33,7 +32,7 @@
           <p>|</p>
           <a href="/profile">My Page</a>
           <p>|</p>
-          <a href="" id="logout">Logout</a>
+          <a href="" id="logout">logout</a>
           {{else}}
           {{!-- for some reason, on the homepage this will show instead, even though still logged in --}}
           <a href="/login">My Page</a>
