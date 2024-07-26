@@ -8,8 +8,10 @@ if (newBookClubButton) {
       newClubForm.style.display = "block";
       event.preventDefault();
 
-  //New Page for new book club form
-  window.location.href = "/new-book-club";
+  //Append the form
+  document.body.appendChild(newClubForm);    
     }
   });
-}
+}  
+
+ 
