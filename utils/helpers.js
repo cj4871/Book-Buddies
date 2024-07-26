@@ -20,6 +20,7 @@
 
 
 
+
 // gets info from the search form, placeholder for now, will need to edit this when the form is created
 // document.getElementById('search-form').addEventListener('submit', function(event) {
 //     event.preventDefault();
@@ -82,5 +83,6 @@ const bookInfo = (searchInfo) => {
 };
 
 bookInfo(searchInfo);
+
 
 
