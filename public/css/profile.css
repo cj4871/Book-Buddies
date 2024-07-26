@@ -2,37 +2,25 @@ main {
   display: flex;
 }
 
-.books-section {
+.clubs-section-container {
   flex-grow: 1;
   margin: 0 8px;
+}
+
+.clubs-title {
+  background-color: var(--teal1);
+  color: var(--light);
+  border-radius: 36px 36px 0 0;
+  padding: 20px 0 1px;
+  text-align: center;
+  Width: 300px;
 }
 
 .clubs-section {
-  flex-grow: 1;
-  min-height: 500px;
-  margin: 0 8px;
+
   background-color: var(--light);
-  border-radius: 36px 36px 0 0;
-}
-
-.clubs-top {
-  background-color: var(--purple);
-  color: var(--light);
-  border-radius: 36px 36px 0 0;
-  padding: 6px 0 1px;
-  text-align: center;
-  font-size: 16px;
-}
-
-.new-club-btn {
-  width: 100%;
-  background-color: var(--gray-mid);
-  padding: 5px;
-  transition: 0.2s;
-}
-
-.new-club-btn:hover {
-  background-color: var(--teal2);
+  padding: 6px 12px;
+  min-height: 330px;
 }
 
 .club-container {
@@ -46,57 +34,21 @@ main {
   cursor: pointer;
 }
 
-/* Styles for the tabs and content --------*/
-.tabs {
+.button-container {
   display: flex;
+  flex-direction: column;
+  padding-top: 40px;
 }
 
-.tabs button {
-  background-color: var(--teal2);
-  float: left;
-  padding: 10px 36px 5px;
-  transition: 0.2s;
-  border-radius: 36px 36px 0 0;
-  margin-right: 8px;
-  color: var(--dark);
-}
-
-.tabs button:hover {
-  background-color: #66d0ce;
-}
-
-.tabs button.active {
-  background-color: var(--teal1);
-  color: var(--light)
-}
-
-.tab-content {
-  display: none;
-  background-color: var(--light);
-  padding: 6px 12px;
-  min-height: 500px;
-}
-
-/* Book card styles -------------- */
-.book-card {
-  background-color: var(--light);
-  width: 200px;
-  border-radius: 20px;
-  border: 1px solid var(--gray-lightest);
+.button-container button {
+  background-color: var(--gray-mid);
+  font-size: 18px;
+  height: 160px;
+  width: 160px;
   margin: 10px;
-  padding-bottom: 12px;
+  border-radius: 36px;
 }
 
-.book-card img {
-  width: 100%;
-  border-radius: 20px;
-  margin-bottom: 8px;
-}
-
-.book-card h3, .book-card p {
-  margin: 4px 14px;
-}
-
-.book-card p {
-
+.button-container button:hover {
+  background-color: var(--teal2);
 }
