@@ -1,0 +1,45 @@
+.login-page {
+  text-align: center;
+  color: rgb(132, 201, 224);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+ .login-div {
+  text-align: center;
+  
+ }
+
+ .signup-form {
+  text-align: center;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+ .password-label {
+  margin-left: -28px;
+ }
+
+.button {
+  background-color: rgb(52, 178, 220);
+  color: white;
+  border-radius: 20px;
+  padding: 5px 30px;
+  margin-top: 5px;
+  margin: 5px auto;
+  display: block;
+ }
+
+button:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
