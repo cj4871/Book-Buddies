@@ -1,6 +1,3 @@
-// made a copy so we can use the tabs somewhere else if we want to
-
-
 //shows "to read" tab by default
 document.getElementById("default-open").click();
 // function to hide and show book tabs content

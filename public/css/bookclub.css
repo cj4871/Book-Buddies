@@ -1,0 +1,58 @@
+.tabs-section {
+  margin-top: 40px;
+}
+
+/* Styles for the tabs and content --------*/
+.tabs {
+  display: flex;
+}
+
+.tabs button {
+  background-color: var(--teal2);
+  float: left;
+  padding: 10px 36px 5px;
+  transition: 0.2s;
+  border-radius: 36px 36px 0 0;
+  margin-right: 8px;
+  color: var(--dark);
+}
+
+.tabs button:hover {
+  background-color: #66d0ce;
+}
+
+.tabs button.active {
+  background-color: var(--teal1);
+  color: var(--light)
+}
+
+.tab-content {
+  display: none;
+  background-color: var(--light);
+  padding: 30px;
+  min-height: 500px;
+}
+
+/* Book card styles -------------- */
+.book-card {
+  background-color: var(--light);
+  width: 200px;
+  border-radius: 20px;
+  border: 1px solid var(--gray-lightest);
+  margin: 10px;
+  padding-bottom: 12px;
+}
+
+.book-card img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.book-card h3, .book-card p {
+  margin: 4px 14px;
+}
+
+.book-card p {
+
+}
