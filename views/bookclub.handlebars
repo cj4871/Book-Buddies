@@ -26,7 +26,6 @@
   <section id="library-section" class="tab-content shadow1">
     <div class="center-flex-column">
         <h3>Add a book to the club library</h3>
-        {{!-- <div class="spacer"></div> --}}
         <form id="search-form">
         <input type="text" id="search-bar" placeholder="Enter book title">
         <button class="button1" type="submit">Search</button>
@@ -56,12 +55,35 @@
 
 {{!-- Meeting Tab Content --}}
   <section id="meetings-section" class="tab-content shadow1">
-    <h3>Books Currently Reading</h3>
+    <div class="center-flex-column">
+        <h3>Upcoming Meetings</h3>
+        <button class="button1">+ New Meeting</button>
+    </div>
+    <div class="line-horizontal"></div>
+
+{{!-- This should be recreated for #each meeting --}}
+    <p><strong>Date: </strong> Tuesday, July 30, 2024</p>
+    <p><strong>Time: </strong>2:00 pm</p>
+    <p><strong>Location: </strong>Adam's house</p>
+    <p><strong>Book: </strong>"Eloquent JavaScript, Second Edition"</p>
+    <p><strong>Read to: </strong>chapter 4</p>
+    <div class="spacer"></div>
+    <button class="button1">Edit Meeting</button>
+    <div class="line-horizontal"></div>
+{{!-- ------------------------- --}}
+
   </section>
 
 {{!-- Voting Tab Content --}}
   <section id="vote-section" class="tab-content shadow1">
-    <h3>Books Already Read</h3>
+    <div class="center-flex-column">
+        <h3>Vote on your next book!</h3>
+        <p>Instructions for voting or whatever</p>
+    </div>
+    <div class="line-horizontal"></div>
+
+    {{!-- I haven't thought about how voting will work, so whoever is working on that can make this structure how ever they want --}}
+    <h2>Put voting/chart stuff here</h2>
   </section>
 
 </section>

@@ -4,10 +4,10 @@
   --purple: #513999;
   --teal1: #17bebb;
   --teal2: #96dbe3;
+  --teal3: #e0f1f4;
   --gray-lightest: #f7f9fc;
   --gray-mid: #dde8f5;
   --yellow: #ffba49;
-  --input: #e0f1f4;
 }
 
 /* General Styles */
@@ -94,8 +94,8 @@ input {
   font-family: jost, sans-serif;
   font-size: 16px;
   border-radius: 6px;
-  border: 2px solid var(--input);
-  background-color: var(--input);
+  border: 2px solid var(--teal3);
+  background-color: var(--teal3);
 }
 
 input:focus {
