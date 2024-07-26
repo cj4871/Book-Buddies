@@ -8,7 +8,7 @@ if (newBookClubButton) {
       newClubForm.style.display = "block";
       event.preventDefault();
 
-  //Append the form
+  //Append the form at bottom of the page
   document.body.appendChild(newClubForm);    
     }
   });
