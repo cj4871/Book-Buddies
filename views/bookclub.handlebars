@@ -1,13 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Book Club</title>
-   <link rel="stylesheet" href="./public/css/styles.css">
-</head>
-<body>
-   <h1>Book Club</h1>
+<link rel="stylesheet" type="text/css" href="/css/bookclub.css">
+
+<h1>Book Club</h1>
+
+{{!-- section for tabs/books --}}
+<section class="books-section">
+  <div class="tabs">
+    <button class="tab-links" onclick="openTab(event, 'to-read')" id="default-open">To Read</button>
+    <button class="tab-links" onclick="openTab(event, 'current-read')">Currenly Reading</button>
+    <button class="tab-links" onclick="openTab(event, 'done-read')">Done Reading</button>
+  </div>
+
+  <section id="to-read" class="tab-content shadow1">
+    <h3>My Book Clubs</h3>
+
+{{!-- Example Book card to be recreated for each book the user saved --}}
+    {{!-- <div class="book-card shadow1">
+      <img src="./images/book-img1.png">
+      <h3>Lessons in Chemistry</h3>
+      <p>Author Name</p> --}}
+
+    </div>
+
+  </section>
+
+  <section id="current-read" class="tab-content shadow1">
+    <h3>Books Currently Reading</h3>
+  </section>
+
+  <section id="done-read" class="tab-content shadow1">
+    <h3>Books Already Read</h3>
+  </section>
+
+</section>
+
+
+
    <form id="search-form">
        <input type="text" id="search-bar" placeholder="Enter book title">
        <button type="submit">Search</button>
@@ -22,6 +49,6 @@
 
 
    <script src="/js/script.js"></script>
-</body>
+
+<script src="./js/bookclub.js"></script>
 <script src="./utils/helpers.js"></script>
-</html>

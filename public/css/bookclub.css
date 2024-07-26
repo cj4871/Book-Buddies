@@ -1,54 +1,6 @@
-/* Made a copy so we can keep the code for the tabs if we use it somewhere else */
-
-
-
-
-main {
-  display: flex;
-}
-
 .books-section {
   flex-grow: 1;
   margin: 0 8px;
-}
-
-.clubs-section {
-  flex-grow: 1;
-  min-height: 500px;
-  margin: 0 8px;
-  background-color: var(--light);
-  border-radius: 36px 36px 0 0;
-}
-
-.clubs-top {
-  background-color: var(--purple);
-  color: var(--light);
-  border-radius: 36px 36px 0 0;
-  padding: 6px 0 1px;
-  text-align: center;
-  font-size: 16px;
-}
-
-.new-club-btn {
-  width: 100%;
-  background-color: var(--gray-mid);
-  padding: 5px;
-  transition: 0.2s;
-}
-
-.new-club-btn:hover {
-  background-color: var(--teal2);
-}
-
-.club-container {
-  padding: 16px 20px;
-  border-bottom: 1px solid var(--gray-mid);
-  transition: .2s;
-}
-
-.club-container:hover {
-  background-color: var(--gray-lightest);
-  cursor: pointer;
 }
 
 /* Styles for the tabs and content --------*/
