@@ -1,8 +1,21 @@
-const searchInfo = 'fight club';
+const searchInput = document.querySelector(".button1");
+const searchName = document.queryselevtor("#search-bar");
 
-const bookInfo = (searchInfo) => {
+
+searchInput.addEventListener('click', function(event) {
+  event.preventDefault();
+  const bookValue = searchName.value.trim();
+  if (bookValue === '') {
+    alert('Please enter a book title');
+  } else {
+    bookInfo(bookValue);
+  }
+  });
+
+
+const bookInfo = (bookValue) => {
   const bookSearch = `https://openlibrary.org/search.json?title=${encodeURIComponent(
-    searchInfo
+    bookValue
   )}`;
   fetch(bookSearch)
     .then((res) => res.json())
@@ -66,7 +79,7 @@ const bookInfo = (searchInfo) => {
     });   
 };
 
-bookInfo(searchInfo);
+// bookInfo(searchInfo);
 
 
 
