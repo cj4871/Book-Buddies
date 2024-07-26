@@ -1,0 +1,24 @@
+#newClubForm {
+  border: 2px solid rgb(0, 157, 255);
+  padding: 10px;
+}
+
+#clubName, #description, #members {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.new-book-club-btn {
+  background-color: var(--teal1);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 5px;
+}
+
+.new-book-club-btn:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
