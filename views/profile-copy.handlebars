@@ -1,0 +1,63 @@
+{{!-- Made a copy just so I can keep the tabs thing I made, so we can use it somewhere else if we want --}}
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/profile.css">
+{{!-- <h1>PROFILE PAGE</h1> --}}
+
+{{!-- section for tabs/books --}}
+<section class="books-section">
+  <div class="tabs">
+    <button class="tab-links" onclick="openTab(event, 'to-read')" id="default-open">To Read</button>
+    <button class="tab-links" onclick="openTab(event, 'current-read')">Currenly Reading</button>
+    <button class="tab-links" onclick="openTab(event, 'done-read')">Done Reading</button>
+  </div>
+
+  <section id="to-read" class="tab-content shadow1">
+    <h3>My Book Clubs</h3>
+
+{{!-- Example Book card to be recreated for each book the user saved --}}
+    {{!-- <div class="book-card shadow1">
+      <img src="./images/book-img1.png">
+      <h3>Lessons in Chemistry</h3>
+      <p>Author Name</p> --}}
+
+    </div>
+
+  </section>
+
+  <section id="current-read" class="tab-content shadow1">
+    <h3>Books Currently Reading</h3>
+  </section>
+
+  <section id="done-read" class="tab-content shadow1">
+    <h3>Books Already Read</h3>
+  </section>
+
+</section>
+
+{{!-- section for book clubs --}}
+<section class="clubs-section shadow1">
+  <div class="clubs-top">
+    <p>Book Clubs</p>
+  </div>
+  <button class="new-club-btn">+ Join a book club</button>
+    <button class="new-club-btn">+ Start a new book club</button>
+
+{{!-- Here's an example club card to be recreated for each club the user is a part of --}}
+  <div class="club-container">
+    <h3>Group Name</h3>
+    Members: Emmalyn, Isaac, Walter, Leo
+  </div>
+    <div class="club-container">
+    <h3>Group Name</h3>
+    Members: Emmalyn, Isaac, Walter, Leo
+  </div>
+    <div class="club-container">
+    <h3>Group Name</h3>
+    Members: Emmalyn, Isaac, Walter, Leo
+  </div>
+
+</section>
+
+<script src="./js/profile.js"></script>
