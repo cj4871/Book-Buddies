@@ -35,4 +35,8 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/bookclub', (req, res) => {
+  res.render('bookclub');
+ })
+
 module.exports = router;
