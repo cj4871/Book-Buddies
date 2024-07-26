@@ -1,15 +1,13 @@
+const router = require("express").Router();
+const userRoutes = require("./userRoutes");
+const bookRoutes = require("./bookRoutes");
+const bookclubRoutes = require("./bookclubRoutes");
+const meetingRoutes = require("./meetingRoutes");
 
-const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const bookRoutes = require('./bookRoutes');
-const bookclubRoutes = require('./bookclubRoutes');
-const meetingRoutes = require('./meetingRoutes');
-
-router.use('/users', userRoutes)
-router.use('/books', bookRoutes)
-router.use('/bookclubs', bookclubRoutes)
-router.use('/meeting', meetingRoutes)
-
+router.use("/users", userRoutes);
+router.use("/books", bookRoutes);
+router.use("/bookclubs", bookclubRoutes);
+router.use("/meetings", meetingRoutes);
 
 // this is just here as a test
 router.get("/", async (req, res) => {
