@@ -24,11 +24,17 @@
 
 {{!-- Club Library Tab Content --}}
   <section id="library-section" class="tab-content shadow1">
-    <h3>Add a book to the club library</h3>
-    <form id="search-form">
-       <input type="text" id="search-bar" placeholder="Enter book title">
-       <button class="button1" type="submit">Search</button>
-   </form>
+    <div class="center-flex-column">
+        <h3>Add a book to the club library</h3>
+        {{!-- <div class="spacer"></div> --}}
+        <form id="search-form">
+        <input type="text" id="search-bar" placeholder="Enter book title">
+        <button class="button1" type="submit">Search</button>
+    </form>
+   </div>
+   <div class="line-horizontal"></div>
+
+
    <div id="book-details">
        <p id="author-name"></p>
        <p id="book-title"></p>

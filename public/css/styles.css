@@ -7,6 +7,7 @@
   --gray-lightest: #f7f9fc;
   --gray-mid: #dde8f5;
   --yellow: #ffba49;
+  --input: #e0f1f4;
 }
 
 /* General Styles */
@@ -28,7 +29,7 @@ p, a {
 
 h1, h2, h3, h4 {
   font-family: Aleo, serif;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 
 h1 {
@@ -61,6 +62,12 @@ strong {
   height: 20px;
 }
 
+.center-flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 button {
   font-family: jost, sans-serif;
   font-size: 16px;
@@ -71,12 +78,29 @@ button {
 
 .button1 {
   background-color: var(--gray-mid);
-  padding: 4px 12px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 6px;
 }
 
 .button1:hover {
   background-color: var(--yellow)
+}
+
+/* If we use other input methods, this'll apply to all types and might be weird. RN the only input type is text field. */
+input {
+  /* height: 28px; */
+  width: 260px;
+  padding: 7px 12px;
+  font-family: jost, sans-serif;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 2px solid var(--input);
+  background-color: var(--input);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--teal2);
 }
 
 /* Header styles */
