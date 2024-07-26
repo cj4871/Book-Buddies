@@ -16,6 +16,4 @@ function openTab(evt, readStatus) {
     tabLinks[i].className = tabLinks[i].className.replace(" active", "");
   }
 
-  document.getElementById(readStatus).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+};
