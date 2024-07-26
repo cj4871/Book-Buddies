@@ -1,8 +1,11 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
+const path = require('path'); 
 const { User } = require('../../models');
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Setting up handlebars as view
 app.engine('handlebars', expressHandlebars());
