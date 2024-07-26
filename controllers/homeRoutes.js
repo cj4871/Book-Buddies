@@ -2,8 +2,13 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
-  res.render('homepage');
+router.get('/', (req, res) => {
+  // if logged in, go to profile instead
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+  res.render('login');
 });
 
 // withAuth stops access to profile when not logged in
@@ -24,15 +29,6 @@ router.get('/profile', withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-});
-
-router.get('/login', (req, res) => {
-  // if logged in, go to profile instead
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
-  res.render('login');
 });
 
 router.get('/bookclub', (req, res) => {
