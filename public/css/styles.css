@@ -43,8 +43,22 @@ h3 {
   font-size: 140%;
 }
 
+strong {
+  font-weight: bold;
+}
+
 .shadow1 {
   box-shadow: 0 0 4px #77777729;
+}
+
+.line-horizontal {
+  background-color: var(--gray-mid);
+  height: 1px;
+  margin: 30px auto;
+}
+
+.spacer {
+  height: 20px;
 }
 
 button {
@@ -53,6 +67,16 @@ button {
   border: none;
   cursor: pointer;
   transition: .2s;
+}
+
+.button1 {
+  background-color: var(--gray-mid);
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.button1:hover {
+  background-color: var(--yellow)
 }
 
 /* Header styles */

@@ -1,17 +1,42 @@
 <link rel="stylesheet" type="text/css" href="/css/bookclub.css">
 
-<h1>Book Club</h1>
+{{!-- Replace this with info from db --}}
+<h1>Book Club Name</h1>
+<div class="line-horizontal"></div>
+
+<p><strong>Members: </strong> Adam, Selena, Stephan, CJ, Hannah</p>
+<p><strong>Description: </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vel iure ea voluptas aspernatur cumque officiis in, velit facilis commodi adipisci praesentium dolorem quas autem voluptates quae provident, impedit iste?</p>
+
+<div class="spacer"></div>
+
+<button class="button1">Edit Details</button>
+
+{{!-- <div class="line-horizontal"></div> --}}
 
 {{!-- section for tabs/books --}}
-<section class="books-section">
+<section class="tabs-section">
+    {{!-- div for just the tab buttons --}}
   <div class="tabs">
-    <button class="tab-links" onclick="openTab(event, 'to-read')" id="default-open">To Read</button>
-    <button class="tab-links" onclick="openTab(event, 'current-read')">Currenly Reading</button>
-    <button class="tab-links" onclick="openTab(event, 'done-read')">Done Reading</button>
+    <button class="tab-links" onclick="openTab(event, 'library-section')" id="default-open">Club Library</button>
+    <button class="tab-links" onclick="openTab(event, 'meetings-section')">Meetings</button>
+    <button class="tab-links" onclick="openTab(event, 'vote-section')">Voting</button>
   </div>
 
-  <section id="to-read" class="tab-content shadow1">
-    <h3>My Book Clubs</h3>
+{{!-- Club Library Tab Content --}}
+  <section id="library-section" class="tab-content shadow1">
+    <h3>Add a book to the club library</h3>
+    <form id="search-form">
+       <input type="text" id="search-bar" placeholder="Enter book title">
+       <button class="button1" type="submit">Search</button>
+   </form>
+   <div id="book-details">
+       <p id="author-name"></p>
+       <p id="book-title"></p>
+       <p id="publication-year"></p>
+       <img id="cover-image" alt="Book Cover" />
+       <p id="book-description"></p>
+   </div>
+
 
 {{!-- Example Book card to be recreated for each book the user saved --}}
     {{!-- <div class="book-card shadow1">
@@ -23,11 +48,13 @@
 
   </section>
 
-  <section id="current-read" class="tab-content shadow1">
+{{!-- Meeting Tab Content --}}
+  <section id="meetings-section" class="tab-content shadow1">
     <h3>Books Currently Reading</h3>
   </section>
 
-  <section id="done-read" class="tab-content shadow1">
+{{!-- Voting Tab Content --}}
+  <section id="vote-section" class="tab-content shadow1">
     <h3>Books Already Read</h3>
   </section>
 
@@ -35,20 +62,8 @@
 
 
 
-   <form id="search-form">
-       <input type="text" id="search-bar" placeholder="Enter book title">
-       <button type="submit">Search</button>
-   </form>
-   <div id="book-details">
-       <p id="author-name"></p>
-       <p id="book-title"></p>
-       <p id="publication-year"></p>
-       <img id="cover-image" alt="Book Cover" />
-       <p id="book-description"></p>
-   </div>
 
 
-   <script src="/js/script.js"></script>
 
 <script src="./js/bookclub.js"></script>
 <script src="./utils/helpers.js"></script>
