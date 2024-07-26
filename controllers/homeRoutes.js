@@ -39,8 +39,4 @@ router.get('/bookclub', (req, res) => {
   res.render('bookclub');
  })
 
- router.get('/bookclubs', async (req, res) => {
-  res.render('bookclub');
-});
-
-module.exports = router;
+ module.exports = router;
