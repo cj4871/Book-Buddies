@@ -1,7 +1,24 @@
-<link rel="stylesheet" type="text/css" href="/css/profile.css">
-<link rel="stylesheet" type="text/css" href="/css/newBookClub.css">
-{{!-- <h1>PROFILE PAGE</h1> --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Buddies</title>
+</head>
+{{!-- Google Fonts --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
 
+  {{!-- css  --}}
+  <link rel="stylesheet" type="text/css" href="/css/profile.css">
+  <link rel="stylesheet" type="text/css" href="/css/newBookClub.css">
+
+
+
+
+{{!-- <h1>PROFILE PAGE</h1> --}}
+<body>
 {{!-- section for tabs/books --}}
 <section class="clubs-section-container">
   <div class="clubs-title"><h3>My Book Clubs</h3></div>
@@ -28,10 +45,10 @@
     <input type="text" id="clubName" name= "clubName" required>
 
     <label id="description" for="description">Description</label>
-    <textarea name="description" id="description" required></textarea>
+    <input name="description" id="description" required></input>
 
     <label id="members" for="members">Members</label>
-    <input type="text" id="members" name="members" placeholder="Names of Members">
+    <input type="text" id="members" name="members" placeholder="Names">
 
     <button class="new-book-club-btn" type="submit">Create New Book Club</button>
   </form>
@@ -43,3 +60,7 @@
 </div>
 
 <script src="./js/profile.js"></script>
+
+</body>
+
+</html> 

@@ -2,25 +2,33 @@
 #newClubForm {
   display: flex;
   justify-content: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: auto;
-  border: 2px solid rgb(0, 157, 255);
+  margin-bottom: 50px;
+  border: 10px solid var(--teal1);
+  background-color: rgb(185, 139, 228);
   padding: 10px;
   text-align: center;
   width: 50%;
+  height: 500px;
+  
 }
 
 #newClubForm label {
   display: block;
   text-align: center;
+  font-family: 'Rubik Bubbles';
+  font-size: 30px;
   margin-bottom: 5px;
 }
 
 #newClubForm input,
 #newClubForm textarea {
-  width: 100%;
+  width: 98%;
   padding: 5px;
   margin-bottom: 10px;
+  align-items: center;
+  font-family: 'Rubik Bubbles';
 }
 
 #clubName, #description, #members {
@@ -29,6 +37,7 @@
   margin-bottom: 10px;
   text-align: center;
   align-items: center;
+  
   
 }
 
@@ -44,4 +53,6 @@
   cursor: pointer;
   opacity: 0.6;
 }
+
+
 
