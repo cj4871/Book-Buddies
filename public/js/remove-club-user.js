@@ -1,0 +1,1 @@
+const removeUser = document.querySelector("#remove_btn")
