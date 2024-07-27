@@ -1,4 +1,18 @@
+const joinClubButton = document.getElementById('club-search-btn'); //Join a new club button
 const newBookClubButton = document.getElementById("start-new-bc-btn"); //Start a new book club button
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+
+searchButton.style.display = "none";
+searchInput.style.display = 'none';
+
+//Join a new club search input
+if (joinClubButton) {
+  joinClubButton.addEventListener('click', function (event) {
+    searchInput.style.display = 'block';
+    searchButton.style.display = 'block';
+  });
+}
 
 //New book club form
 if (newBookClubButton) {
@@ -10,8 +24,13 @@ if (newBookClubButton) {
 
   //Append the form at bottom of the page
   document.body.appendChild(newClubForm);    
+
     }
   });
 }  
+
+searchButton.addEventListener('click', () => {
+  const searchInput = document.getElementById('search-input').value;
+});
 
  
