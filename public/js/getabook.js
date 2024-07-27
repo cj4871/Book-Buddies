@@ -1,5 +1,5 @@
 const searchInput = document.querySelector(".button1");
-const searchName = document.queryselevtor("#search-bar");
+const searchName = document.querySelector("#search-bar");
 
 
 searchInput.addEventListener('click', function(event) {
