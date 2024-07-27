@@ -29,8 +29,40 @@ if (newBookClubButton) {
   });
 }  
 
-searchButton.addEventListener('click', () => {
-  const searchInput = document.getElementById('search-input').value;
+//Search Button to look for existing book clubs
+searchButton.addEventListener('click', async () => {
+  const searchQuery = document.getElementById('search-input').value;
+
+  try {
+    const response = await fetch (`/api/bookclubs/search?query=${searchQuery}`);
+    const data = await response.json();
+
+    //Response data
+    if (data && data.length > 0) {
+      console.log(data);
+    } else {
+      console.log('No Book Clubs Found.')
+    }
+  } catch (error) {
+    console.log(error);
+  }
 });
 
- 
+//fetching existing book clubs and display
+fetch('/api/bookclubs/all')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then (data => {
+    const datalist = document.getElementById('book-clubs-list');
+
+    data.forEach(bookClub => {
+      const option = document.createElement('option');
+      option.value = bookClub.name;
+      datalist.appendChild(option);
+    });
+  })
+  .catch(error => console.error('Error finding book clubs:', error));

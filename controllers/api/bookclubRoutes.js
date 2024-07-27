@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
 });
 
 //Route to FETCH book clubs from the DB
-router.get("/", async (req, res) => {
+router.get("/all", async (req, res) => {
   try {
     const bookClubs = await BookClub.findAll();
     res.json(bookClubs);
@@ -48,5 +48,6 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json({ error: "Server Error" });
   }
 });
+
 
 module.exports = router;
