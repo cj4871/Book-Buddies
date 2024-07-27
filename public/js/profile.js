@@ -2,6 +2,10 @@ const joinClubButton = document.getElementById('club-search-btn'); //Join a new 
 const newBookClubButton = document.getElementById("start-new-bc-btn"); //Start a new book club button
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
+const newClubForm = document.getElementById('newClubForm');
+const clubNamesContainer = document.querySelectorAll('.club-container h3');
+const bookClubTemplate = document.getElementById('bookClubTemplate');
+const clubsSection = document.querySelector('.clubs-section-container');
 
 searchButton.style.display = "none";
 searchInput.style.display = 'none';
@@ -48,21 +52,54 @@ searchButton.addEventListener('click', async () => {
   }
 });
 
-//fetching existing book clubs and display
-fetch('/api/bookclubs/all')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then (data => {
-    const datalist = document.getElementById('book-clubs-list');
+  //Event listener for submit button on form for new club
+  newClubForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+ //Get user input for club name and member names
+    const clubNameInput = document.getElementById('clubName');
+    const newClubName = clubNameInput.value;
 
-    data.forEach(bookClub => {
-      const option = document.createElement('option');
-      option.value = bookClub.name;
-      datalist.appendChild(option);
-    });
-  })
-  .catch(error => console.error('Error finding book clubs:', error));
+    const membersInput = document.getElementById('members');
+    const newMembers = membersInput.value;
+
+    console.log('New Club Name:', newClubName);
+    console.log('New Members:', newMembers);
+
+    //Updating template with user input
+    const newClubSection = bookClubTemplate.content.cloneNode(true);
+    newClubSection.querySelector('h3').textContent = newClubName;
+
+    const membersParagraph = document.createElement('p');
+    membersParagraph.textContent = `Members: ${newMembers}`;
+    //Appending User input for members
+    newClubSection.querySelector('.club-container').appendChild(membersParagraph);
+
+    console.log('New Club Section:', newClubSection);
+
+    //Appending user input to Book club container
+    console.log('Clubs Section:', clubsSection);
+    clubsSection.appendChild(newClubSection);
+
+    //Reseting form input fields after user submits New book club info
+    clubNameInput.value = '';
+    membersInput.value = '';
+  });
+
+  //fetching existing book clubs and display
+fetch('/api/bookclubs/all')
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
+})
+.then (data => {
+  const datalist = document.getElementById('book-clubs-list');
+
+  data.forEach(bookClub => {
+    const option = document.createElement('option');
+    option.value = bookClub.name;
+    datalist.appendChild(option);
+  });
+})
+.catch(error => console.error('Error finding book clubs:', error));
