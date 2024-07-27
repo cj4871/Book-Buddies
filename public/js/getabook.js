@@ -1,4 +1,5 @@
-const searchInput = document.querySelector(".button1");
+document.addEventListener('DOMContentLoaded', function() {
+const searchInput = document.querySelector("#searchbutton");
 const searchName = document.querySelector("#search-bar");
 
 
@@ -10,7 +11,7 @@ searchInput.addEventListener('click', function(event) {
   } else {
     bookInfo(bookValue);
   }
-  });
+  })});
 
 
 const bookInfo = (bookValue) => {
