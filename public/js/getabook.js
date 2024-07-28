@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
             details.appendChild(pubYear);
             details.appendChild(saveButton);
             details.appendChild(clearButton);
-            
+
 
             // save button to add the searched book to the db
             saveButton.addEventListener('click', function () {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
               saveNewBook(newBook);
             });
             // clear button removes search data if you decide against adding a book 
-            clearButton.addEventListener('click', function() {
+            clearButton.addEventListener('click', function () {
               clearSearchResults();
             });
 
@@ -118,13 +118,57 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // clears the searched result after the book is saved to the db
-const clearSearchResults = () => {
-  const details = document.getElementById('detailsDisplay');
-  details.innerHTML = ''; 
-  const coverImageElement = document.getElementById("coverImage");
-  if (coverImageElement) {
-    coverImageElement.src = ''; 
-  }
-  searchName.value = ''; 
-};
+  const clearSearchResults = () => {
+    const details = document.getElementById('detailsDisplay');
+    details.innerHTML = '';
+    const coverImageElement = document.getElementById("coverImage");
+    if (coverImageElement) {
+      coverImageElement.src = '';
+    }
+    searchName.value = '';
+  };
 });
+
+// fetch and display saved books
+const fetchSavedBooks = () => {
+  fetch('http://localhost:3001/api/savedbooks')
+    .then(response => response.json())
+    .then(data => {
+      const savedBooksDisplay = document.getElementById('savedBooksDisplay');
+      savedBooksDisplay.innerHTML = ''; 
+
+      data.forEach(book => {
+        const bookTitle = document.createElement('p');
+        bookTitle.textContent = `Title: ${book.title}`;
+
+        const bookCover = document.createElement('img');
+        bookCover.alt = `Cover of ${book.title}`;
+
+        const coverSearchUrl = `https://openlibrary.org/search.json?title=${encodeURIComponent(book.title)}`;
+        fetch(coverSearchUrl)
+          .then(res => res.json())
+          .then(data => {
+            const { docs } = data;
+            if (docs.length > 0) {
+              const coverEditionKey = docs[0].cover_edition_key;
+              if (coverEditionKey) {
+                const coverImageUrl = `https://covers.openlibrary.org/b/olid/${coverEditionKey}-M.jpg`;
+                bookCover.src = coverImageUrl;
+              } else {
+                bookCover.alt = "No cover image available";
+              }
+            } else {
+              bookCover.alt = "No cover image available";
+            }
+          })
+          .catch(error => console.error("Error fetching cover image:", error));
+
+        savedBooksDisplay.appendChild(bookTitle);
+        savedBooksDisplay.appendChild(bookCover);
+      });
+    })
+    .catch(error => console.error("Error fetching saved books:", error));
+};
+
+// fetch and display saved books on page load
+fetchSavedBooks();

@@ -10,6 +10,7 @@ router.use("/books", bookRoutes);
 router.use("/bookclubs", bookclubRoutes);
 router.use("/meetings", meetingRoutes);
 router.use('/savebook', bookRoutes);
+router.use('/savedbooks', bookRoutes);
 // router.use("/newbookclub", newBookClubRoutes);
 
 // this is just here as a test
