@@ -21,7 +21,7 @@
 </template>
 
 {{!-- Here's an example club card to be recreated for each club the user is a part of --}}
-    <div class="club-container">
+    {{!-- <div class="club-container">
       <h3>Group Name</h3>
       Members: Emmalyn, Isaac, Walter, Leo
     </div>
@@ -32,21 +32,21 @@
       <div class="club-container">
       <h3>Group Name</h3>
       Members: Emmalyn, Isaac, Walter, Leo
-    </div>
+    </div> --}}
 
   </section>
 {{!-- New Club Form --}}
   <form id="newClubForm" style="display: none;">
-    <label id="clubName" for="clubName">Club Name</label>
-    <input type="text" id="clubName" name= "clubName" required>
+    <label for="clubName">Club Name</label>
+    <input type="text" id="clubName" name= "clubName" placeholder="Club Name" required>
 
     <label id="description" for="description">Description</label>
-    <input name="description" id="description" required></input>
+    <input name="description" id="description" placeholder="Description" required></input>
 
     <label id="members" for="members">Members</label>
     <input type="text" id="members" name="members" placeholder="Names">
 
-    {{!-- <img src="/public/images/books.webp">   Photo of books for bottom of form --}}
+  
 
     <button class="new-book-club-btn" type="submit">Create New Book Club</button>
   </form>
