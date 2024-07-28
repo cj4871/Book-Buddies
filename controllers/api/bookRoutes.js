@@ -31,4 +31,14 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get('/savedbooks', async (req, res) => {
+  try {
+    const savedBooks = await Book.findAll();
+    res.status(200).json(savedBooks);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
