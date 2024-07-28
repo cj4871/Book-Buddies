@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const descr = document.createElement('p');
             const pubYear = document.createElement('p');
             const saveButton = document.createElement('button');
+            const clearButton = document.createElement('button');
 
             bookTitle.innerHTML = `Title: ${title}`;
             author.innerHTML = `Author: ${author_name.join(',')}`;
@@ -44,12 +45,16 @@ document.addEventListener('DOMContentLoaded', function () {
             pubYear.innerHTML = `Year: ${first_publish_year}`;
             saveButton.textContent = 'Save Book';
             saveButton.id = 'saveButton';
+            clearButton.textContent = 'Nevermind';
+            clearButton.id = 'clearButton';
 
             details.appendChild(bookTitle);
             details.appendChild(author);
             details.appendChild(descr);
             details.appendChild(pubYear);
             details.appendChild(saveButton);
+            details.appendChild(clearButton);
+            
 
             // save button to add the searched book to the db
             saveButton.addEventListener('click', function () {
@@ -61,6 +66,11 @@ document.addEventListener('DOMContentLoaded', function () {
               };
               saveNewBook(newBook);
             });
+            // clear button removes search data if you decide against adding a book 
+            clearButton.addEventListener('click', function() {
+              clearSearchResults();
+            });
+
             // api call to get the book cover image
             if (cover_edition_key) {
               const coverImageUrl = `https://covers.openlibrary.org/b/olid/${cover_edition_key}-M.jpg`;
@@ -98,11 +108,23 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         console.log('Book saved:', data);
         alert('Book saved successfully!');
+        clearSearchResults();
       })
       .catch((error) => {
         console.error('Error saving book:', error);
         alert('Error saving book. Please try again.');
       });
   };
-});
 
+
+  // clears the searched result after the book is saved to the db
+const clearSearchResults = () => {
+  const details = document.getElementById('detailsDisplay');
+  details.innerHTML = ''; 
+  const coverImageElement = document.getElementById("coverImage");
+  if (coverImageElement) {
+    coverImageElement.src = ''; 
+  }
+  searchName.value = ''; 
+};
+});
