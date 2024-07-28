@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // fetch and display saved books
 const fetchSavedBooks = () => {
-  fetch('http://localhost:3001/api/savedbooks')
+  fetch('/api/savedbooks')
     .then(response => response.json())
     .then(data => {
       const savedBooksDisplay = document.getElementById('savedBooksDisplay');
