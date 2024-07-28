@@ -61,3 +61,19 @@
   max-width: 100%;
   height: auto;
 }
+
+.button1{
+  background-color: rgb(252, 205, 119);
+}
+
+#searchbutton {
+  background-color: #66d0ce;
+  color: white;
+  padding: 8px 40px;
+}
+
+#searchbutton:hover{
+  transition: 0.4s;
+  background-color: #4fa2a1;
+}
+
