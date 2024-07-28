@@ -40,10 +40,11 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    genre: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    // commented out genre because it was breaking the route, can add it back later
+    // genre: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     publication_year: {
       type: DataTypes.INTEGER,
     },
