@@ -70,6 +70,12 @@ if (newBookClubButton) {
   });
 }); 
 
+document.querySelectorAll('.club-container').forEach(club => {
+  club.addEventListener('click', () => {
+    window.location.href = 'http://localhost:3001/bookclub';
+  });
+});
+
 // //Search Button to look for existing book clubs
 // searchButton.addEventListener('click', async () => {
 //   const searchQuery = document.getElementById('search-input').value;
