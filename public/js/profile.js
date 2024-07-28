@@ -45,6 +45,8 @@ if (newBookClubButton) {
     const membersInput = document.getElementById('members').value;
     const descriptionInput = document.getElementById('description').value;
 
+    localStorage.setItem('clubDescription', descriptionInput);
+
     console.log('Club Name Input: ', clubNameInput);
     console.log('Members Input: ', membersInput);
     console.log('Description Input ', descriptionInput);
@@ -70,11 +72,18 @@ if (newBookClubButton) {
   });
 }); 
 
+//Gets hard coded book clubs to guide to next page, but not the NEW book clubs
 document.querySelectorAll('.club-container').forEach(club => {
   club.addEventListener('click', () => {
     window.location.href = 'http://localhost:3001/bookclub';
   });
 });
+
+
+
+//Started over, but kept this code just in case. Will delete if not needed before presentation day
+
+
 
 // //Search Button to look for existing book clubs
 // searchButton.addEventListener('click', async () => {
