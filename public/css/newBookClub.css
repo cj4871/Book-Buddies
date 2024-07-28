@@ -1,23 +1,43 @@
+#search-input {
+  margin-left: 20px;
+  margin-top: 80px;
+  display: block;
+}
+
+#search-button {
+  background-color: var(--teal1);
+  color: white;
+  border-radius: 5px;
+  width: 93%;
+  padding: 7px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#search-button:hover{
+  opacity: 0.6;
+}
 
 #newClubForm {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
   margin: auto;
-  margin-bottom: 50px;
-  border: 10px solid var(--teal1);
-  background-color: rgb(185, 139, 228);
-  padding: 10px;
+  margin-bottom: 150px;
+  border: 5px solid none;
+  border-radius: 40px;
+  background-image: linear-gradient(rgb(145, 225, 251), rgb(200, 97, 229));
+  padding: 50px;
   text-align: center;
   width: 50%;
-  height: 500px;
-  
+  height: 300px;
 }
 
 #newClubForm label {
   display: block;
   text-align: center;
-  font-family: 'Rubik Bubbles';
+  font-family: 'Inter';
+  font-weight: bold;
   font-size: 30px;
   margin-bottom: 5px;
 }
@@ -28,7 +48,8 @@
   padding: 5px;
   margin-bottom: 10px;
   align-items: center;
-  font-family: 'Rubik Bubbles';
+  font-family: 'Inter';
+  font-weight: bold;
 }
 
 #clubName, #description, #members {
@@ -51,7 +72,7 @@
 
 .new-book-club-btn:hover {
   cursor: pointer;
-  opacity: 0.6;
+  background-color: rgb(1, 135, 135);
 }
 
 
