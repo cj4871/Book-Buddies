@@ -2,7 +2,7 @@ const { response } = require("express");
 const { newBookClub } = require("../../models");
 
 
-searchButton.addEventListener('click', async function (event)){
+searchButton.addEventListener('click', async function (event){
   event.preventDefault();
   const club_search = document.getElementById('club-search').value;
 
@@ -11,6 +11,7 @@ searchButton.addEventListener('click', async function (event)){
   } else {
     const memberNames = []; 
     const descriptionInput = document.getElementById('description').value;
+    const numberOfMembers = [];
 
     for (let i = 1; i <= numberOfMembers; i++) {
       const memberName = document.getElementById(`member${i}`).value;
@@ -20,4 +21,4 @@ searchButton.addEventListener('click', async function (event)){
     console.log('Description Input: ', descriptionInput);
     console.log('Member Names: ', memberNames); 
   }
-}
+});
