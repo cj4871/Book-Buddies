@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //Gets hard coded book clubs to guide to next page, but not the NEW book clubs
 document.querySelectorAll(".club-container").forEach((club) => {
   club.addEventListener("click", () => {
-    window.location.href = `http://localhost:3001/bookclub/${club.id}`;
+    window.location.href = `/bookclub/${club.id}`;
   });
 });
 
