@@ -86,38 +86,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//Gets hard coded book clubs to guide to next page, but not the NEW book clubs
-<<<<<<< HEAD
-=======
-// commented out to doing another way
->>>>>>> 7fc79360e325fc0a92155c449c3f7b194a57d080
-// document.querySelectorAll(".club-container").forEach((club) => {
-//   club.addEventListener("click", () => {
-//     window.location.href = `/bookclub/${club.id}`;
-//   });
-<<<<<<< HEAD
-=======
-// });
-
-//Started over, but kept this code just in case. Will delete if not needed before presentation day
-
-// //Search Button to look for existing book clubs
-// searchButton.addEventListener('click', async () => {
-//   const searchQuery = document.getElementById('search-input').value;
-
-//   try {
-//     const response = await fetch (`/api/bookclubs/search?query=${searchQuery}`);
-//     const data = await response.json();
-
-//     //Response data
-//     if (data && data.length > 0) {
-//       console.log(data);
-//     } else {
-//       console.log('No Book Clubs Found.')
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
->>>>>>> 7fc79360e325fc0a92155c449c3f7b194a57d080
-// });
-
