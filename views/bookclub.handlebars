@@ -4,16 +4,15 @@
 <h1>{{name}}</h1>
 
 {{!-- added a leave button to remove the user from the group --}}
-<button  id="leave_btn">Leave Group</button>
+{{!-- <button  id="leave_btn">Leave Group</button> --}}
 <div class="line-horizontal"></div>
 
 
-<p><strong>Members: </strong> Adam, Selena, Stephan, CJ, Hannah</p>
+{{!-- <p><strong>Members: </strong> Adam, Selena, Stephan, CJ, Hannah</p> --}}
 <p><strong>Description: </strong>{{description}}</p>
-
 <div class="spacer"></div>
 
-<button class="button1">Edit Details</button>
+{{!-- <button class="button1">Edit Details</button> --}}
 
 {{!-- <div class="line-horizontal"></div> --}}
 
@@ -23,7 +22,7 @@
   <div class="tabs">
     <button class="tab-links" onclick="openTab(event, 'library-section')" id="default-open">Club Library</button>
     <button class="tab-links" onclick="openTab(event, 'meetings-section')">Meetings</button>
-    <button class="tab-links" onclick="openTab(event, 'vote-section')">Voting</button>
+    {{!-- <button class="tab-links" onclick="openTab(event, 'vote-section')">Voting</button> --}}
   </div>
 
 {{!-- Club Library Tab Content --}}
@@ -72,24 +71,22 @@
     <p><strong>Location: </strong>Adam's house</p>
     <p><strong>Book: </strong>"Eloquent JavaScript, Second Edition"</p>
     <p><strong>Read to: </strong>chapter 4</p>
-    <div class="spacer"></div>
-    <button class="button1">Edit Meeting</button>
+    {{!-- <div class="spacer"></div> --}}
+    {{!-- <button class="button1">Edit Meeting</button> --}}
     <div class="line-horizontal"></div>
 {{!-- ------------------------- --}}
 
   </section>
 
 {{!-- Voting Tab Content --}}
-  <section id="vote-section" class="tab-content shadow1">
+  {{!-- <section id="vote-section" class="tab-content shadow1">
     <div class="center-flex-column">
         <h3>Vote on your next book!</h3>
         <p>Instructions for voting or whatever</p>
     </div>
     <div class="line-horizontal"></div>
 
-    {{!-- I haven't thought about how voting will work, so whoever is working on that can make this structure how ever they want --}}
-    <h2>Put voting/chart stuff here</h2>
-  </section>
+  </section> --}}
 
 </section>
 
