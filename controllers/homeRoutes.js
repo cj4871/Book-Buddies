@@ -35,8 +35,17 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-router.get('/bookclub', (req, res) => {
-  res.render('bookclub');
+router.get('/bookclub/:id', async (req, res) => {
+  try {
+    const bookClub = await BookClub.findByPk(req.params.id);
+    let bClub  = bookClub.get({ plain: true})
+
+    res.render('bookclub', bClub);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server Error" });
+  }
+  // res.render('bookclub');
  })
 
  module.exports = router;

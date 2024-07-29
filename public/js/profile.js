@@ -79,11 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Gets hard coded book clubs to guide to next page, but not the NEW book clubs
-document.querySelectorAll(".club-container").forEach((club) => {
-  club.addEventListener("click", () => {
-    window.location.href = `/bookclub/${club.id}`;
-  });
-});
+// commented out to doing another way
+// document.querySelectorAll(".club-container").forEach((club) => {
+//   club.addEventListener("click", () => {
+//     window.location.href = `/bookclub/${club.id}`;
+//   });
+// });
 
 //Started over, but kept this code just in case. Will delete if not needed before presentation day
 

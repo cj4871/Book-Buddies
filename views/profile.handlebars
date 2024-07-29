@@ -22,11 +22,14 @@
 
 {{!-- Here's an example club card to be recreated for each club the user is a part of --}}
     {{#each bookClubs as |bookClub|}}
-    <div class="club-container">
-      <h3>{{bookClub.name}}</h3>
-      Description: {{bookClub.description}}
-    </div>
+    <a href="/bookclub/{{bookClub.id}}">
+      <div class="club-container">
+        <h3>{{bookClub.name}}</h3>
+        Description: {{bookClub.description}}
+      </div>
+    </a>
     {{/each}}
+  
 
 
       <div class="club-container">
