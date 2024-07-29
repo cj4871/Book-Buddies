@@ -23,6 +23,7 @@
   justify-content: center;
   justify-content: space-evenly;
   margin: auto;
+  margin-left: 250px;
   margin-bottom: 150px;
   border: 5px solid none;
   border-radius: 40px;
@@ -67,7 +68,7 @@
   color: white;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-top: 5px;
+  margin-top: 25px;
 }
 
 .new-book-club-btn:hover {
