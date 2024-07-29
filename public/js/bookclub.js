@@ -1,3 +1,5 @@
+// const bookClub = await fetch
+
 //shows "to read" tab by default
 document.getElementById("default-open").click();
 // function to hide and show book tabs content
@@ -15,5 +17,4 @@ function openTab(evt, tab) {
 
   document.getElementById(tab).style.display = "block";
   evt.currentTarget.className += " active";
-};
-
+}

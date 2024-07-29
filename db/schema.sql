@@ -8,8 +8,21 @@ CREATE DATABASE book_buddies_db;
 CREATE TABLE book_club (
    id SERIAL PRIMARY KEY,
    name VARCHAR(50) UNIQUE NOT NULL,
-   location VARCHAR(50) NOT NULL
+   description VARCHAR(500) NOT NULL,
+   
+
 );
+
+CREATE TABLE book_selections (
+   id SERIAL PRIMARY KEY,
+   book_club_id INTEGER NOT NULL,
+   FOREIGN KEY (book_club_id)
+   REFERENCES book_club(id)
+  book_id INTEGER NOT NULL,
+   FOREIGN KEY (book_id)
+   REFERENCES book(id)
+);
+
 
 -- Book tabel definition
 CREATE TABLE book (
