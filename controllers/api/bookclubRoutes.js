@@ -17,6 +17,16 @@ router.get("/all", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    const bookClub = await BookClub.findByPk(req.params.id);
+    res.json(bookClub);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
 //Route for creating NEW book club by ID
 
 router.post("/", async (req, res) => {
@@ -48,6 +58,5 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json({ error: "Server Error" });
   }
 });
-
 
 module.exports = router;
