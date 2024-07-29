@@ -6,7 +6,7 @@ const meetingRoutes = require("./meetingRoutes");
 // const newBookClubRoutes = require("./newBookClubRoutes");
 
 router.use("/users", userRoutes);
-router.use("/books", bookRoutes);
+router.use("/book", bookRoutes);
 router.use("/bookclubs", bookclubRoutes);
 router.use("/meetings", meetingRoutes);
 router.use('/savebook', bookRoutes);

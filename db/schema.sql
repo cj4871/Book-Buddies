@@ -8,16 +8,14 @@ CREATE DATABASE book_buddies_db;
 CREATE TABLE book_club (
    id SERIAL PRIMARY KEY,
    name VARCHAR(50) UNIQUE NOT NULL,
-   description VARCHAR(500) NOT NULL,
-   
-
+   description VARCHAR(500) NOT NULL
 );
 
 CREATE TABLE book_selections (
    id SERIAL PRIMARY KEY,
    book_club_id INTEGER NOT NULL,
    FOREIGN KEY (book_club_id)
-   REFERENCES book_club(id)
+   REFERENCES book_club(id),
   book_id INTEGER NOT NULL,
    FOREIGN KEY (book_id)
    REFERENCES book(id)
@@ -59,7 +57,7 @@ CREATE TABLE meeting (
     location VARCHAR(50) NOT NULL,
     time VARCHAR(15) NOT NULL,
     book_chapter INTEGER,
-    book_club_id INTEGER NOT NULL,
+    book_club_id INTEGER,
     FOREIGN KEY (book_club_id)
     REFERENCES book_club(id)
     ON DELETE SET NULL,
