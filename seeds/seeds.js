@@ -9,12 +9,12 @@ const bookClubData = require("./bookclubData.json");
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await Book.bulkCreate(bookData);
+  // await Book.bulkCreate(bookData);
 
 
   await User.bulkCreate(userData);
 
-  await Meeting.bulkCreate(meetingData);
+  // await Meeting.bulkCreate(meetingData);
 
   await BookClub.bulkCreate(bookClubData);
 

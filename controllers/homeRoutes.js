@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, BookClub } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
@@ -20,9 +20,13 @@ router.get('/profile', withAuth, async (req, res) => {
       // do I need to include a model here?
     });
 
+    const bookClubData = await BookClub.findAll()
+    const bookClubs = bookClubData.map((bookClub) => bookClub.get({ plain: true}))
+
     const user = userData.get({ plain: true });
 
     res.render('profile', {
+      bookClubs,
       ...user,
       logged_in: true
     });
