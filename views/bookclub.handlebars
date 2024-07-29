@@ -1,11 +1,15 @@
 <link rel="stylesheet" type="text/css" href="/css/bookclub.css">
 
 {{!-- Replace this with info from db --}}
-<h1>Book Club Name</h1>
+<h1>{{name}}</h1>
+
+{{!-- added a leave button to remove the user from the group --}}
+<button  id="leave_btn">Leave Group</button>
 <div class="line-horizontal"></div>
 
+
 <p><strong>Members: </strong> Adam, Selena, Stephan, CJ, Hannah</p>
-<p><strong>Description: </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vel iure ea voluptas aspernatur cumque officiis in, velit facilis commodi adipisci praesentium dolorem quas autem voluptates quae provident, impedit iste?</p>
+<p><strong>Description: </strong>{{description}}</p>
 
 <div class="spacer"></div>
 
@@ -38,7 +42,12 @@
     <img id="coverImage">
   </div>
   <div id="savedBooksDisplay">
-  </div>
+
+
+</div>
+
+
+
 
 {{!-- Example Book card to be recreated for each book the user saved --}}
     {{!-- <div class="book-card shadow1">

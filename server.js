@@ -42,7 +42,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
-sequelize.sync().then(() => {
+sequelize.sync( {force: false} ).then(() => {
     app.listen(PORT, () =>{
         console.log(`Server started at ${PORT}`);
     })

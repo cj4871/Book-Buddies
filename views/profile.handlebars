@@ -21,10 +21,17 @@
 </template>
 
 {{!-- Here's an example club card to be recreated for each club the user is a part of --}}
-    <div class="club-container">
-      <h3>Group Name</h3>
-      Members: Emmalyn, Isaac, Walter, Leo
-    </div>
+    {{#each bookClubs as |bookClub|}}
+    <a href="/bookclub/{{bookClub.id}}">
+      <div class="club-container">
+        <h3>{{bookClub.name}}</h3>
+        Description: {{bookClub.description}}
+      </div>
+    </a>
+    {{/each}}
+  
+
+
       <div class="club-container">
       <h3>Group Name</h3>
       Members: Emmalyn, Isaac, Walter, Leo
