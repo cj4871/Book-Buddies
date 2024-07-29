@@ -1,3 +1,9 @@
+#leave_btn{
+  background-color: red;
+  border-radius: 6px;
+   
+}
+
 .tabs-section {
   margin-top: 40px;
 }
@@ -89,8 +95,8 @@
 }
 
 #coverImage {
-  box-shadow: 5px 5px #d2d1d1;
   margin-bottom: 20px;
+  box-shadow: 4px 4px 5px rgb(78, 78, 78);
 }
 
 #detailsDisplay {
@@ -121,3 +127,5 @@
   transition: 0.4s;
   background-color: rgb(236, 168, 42);
 }
+
+
