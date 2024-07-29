@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
               const newBook = {
                 title: title,
                 author: author_name.join(','),
-                published: first_publish_year,
+                publication_year: first_publish_year,
                 // genre: 'default_genre' 
               };
               saveNewBook(newBook);
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   // uses the savebook route to post the book data to the db
   const saveNewBook = (bookData) => {
-    fetch('/api/savebook', {
+    fetch('/api/book', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Book saved:', data);
         alert('Book saved successfully!');
         clearSearchResults();
+        fetchSavedBooks();
       })
       .catch((error) => {
         console.error('Error saving book:', error);
@@ -131,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // fetch and display saved books
 const fetchSavedBooks = () => {
-  fetch('/api/savedbooks')
+  fetch('/api/book')
     .then(response => response.json())
     .then(data => {
       const savedBooksDisplay = document.getElementById('savedBooksDisplay');
@@ -139,10 +140,11 @@ const fetchSavedBooks = () => {
 
       data.forEach(book => {
         const bookTitle = document.createElement('p');
-        bookTitle.textContent = `Title: ${book.title}`;
+        bookTitle.textContent = '';
 
         const bookCover = document.createElement('img');
         bookCover.alt = `Cover of ${book.title}`;
+        bookCover.id = 'cover';
 
         const coverSearchUrl = `https://openlibrary.org/search.json?title=${encodeURIComponent(book.title)}`;
         fetch(coverSearchUrl)
@@ -170,5 +172,7 @@ const fetchSavedBooks = () => {
     .catch(error => console.error("Error fetching saved books:", error));
 };
 
+
 // fetch and display saved books on page load
-fetchSavedBooks();
+document.addEventListener('DOMContentLoaded', fetchSavedBooks);
+// fetchSavedBooks();

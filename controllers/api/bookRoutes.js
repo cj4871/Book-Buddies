@@ -21,20 +21,10 @@ router.post("/", async (req, res) => {
     const newBook = await Book.create({
       title: req.body.title,
       author: req.body.author,
-      published: req.body.published,
+      publication_year: req.body.publication_year,
       // genre: req.body.genre, 
     });
     res.status(200).json(newBook);
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
-router.get('/savedbooks', async (req, res) => {
-  try {
-    const savedBooks = await Book.findAll();
-    res.status(200).json(savedBooks);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
