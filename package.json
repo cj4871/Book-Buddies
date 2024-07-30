@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "seeds": "node seeds/seeds.js"
+    "seeds": "node seeds/seeds.js", 
+    "db:build": "node ./src/backend/seed.js",
+
   },
   "keywords": [],
   "author": "",
