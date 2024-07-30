@@ -1,49 +1,51 @@
 const { Meeting } = require("../../models");
 const router = require("express").Router();
 
-//test route
-router.get("/", async (req, res) => {
-  res.send(`You're on controllers/api/meetings`);
-});
+// Test route
+// router.get("/", async (req, res) => {
+//   res.json({ message: "You're on controllers/api/meetings" });
+// });
 
 router.post("/", (req, res) => {
-  //creating a meeting
-
+  // creating a meeting
   Meeting.create({
     date: req.body.date,
-    location: req.body.date,
+    location: req.body.location,
     time: req.body.time,
-    book_chaper: req.body.book_chaper,
+    book_chapter: req.body.book_chapter,
   })
     .then((newMeeting) => {
       res.json(newMeeting);
     })
     .catch((err) => {
-      res.json(err);
+      res.status(500).json(err);
     });
 });
 
-router.get("/id:", async (req, res) => {
-  //getting meeting by id
-
+router.get("/:id", async (req, res) => {
+  // getting meeting by id
   try {
     const meeting = await Meeting.findByPk(req.params.id);
-    res.json(meeting);
+    if (meeting) {
+      res.json(meeting);
+    } else {
+      res.status(404).json({ message: "Meeting not found" });
+    }
   } catch (err) {
     console.error(err);
-    res.status(500).send("Meeting Not foud");
+    res.status(500).send("Meeting not found");
   }
 });
 
 router.get("/", async (req, res) => {
   try {
     const meetings = await Meeting.findAll();
-    res.json(meetings);
-    //getting all meetings
+    res.json(meetings); // make sure this returns an array, it was messing with my date formatting
   } catch (err) {
     console.error(err);
-    res.status(500).send("No Meetings found");
+    res.status(500).json({ message: "No meetings found" });
   }
 });
 
 module.exports = router;
+
