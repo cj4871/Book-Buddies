@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, BookClub } = require('../models');
+const { User, BookClub, Book } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
@@ -40,7 +40,17 @@ router.get('/bookclub/:id', async (req, res) => {
     const bookClub = await BookClub.findByPk(req.params.id);
     let bClub  = bookClub.get({ plain: true})
 
-    res.render('bookclub', bClub);
+    const bookClubData = await BookClub.findByPk(req.params.id, { include: [{ model: Book }]});
+
+    let clubBooks = bookClubData.Books.map((book) => {book.get({ plain: true })});
+
+    // const bookClubData = await BookClub.findAll()
+    // const bookClubs = bookClubData.map((bookClub) => bookClub.get({ plain: true}))
+
+    res.render('bookclub', { bClub, clubBooks });
+
+
+
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server Error" });
