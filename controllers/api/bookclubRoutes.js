@@ -30,19 +30,23 @@ router.get("/:id", async (req, res) => {
 });
 
 //Route for creating NEW book club by ID
+router.post('/', async (req, res) => {
+  const { clubName, description } = req.body;
 
-router.post("/", async (req, res) => {
+  if (!clubName || !description) {
+    return res.status(400).json({ error: 'Club Name and Description are required' });
+  }
   try {
-    const newBookClub = await BookClub.create(req.body);
+    const newBookClub = await BookClub.create({ clubName, description });
     res.status(201).json(newBookClub);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Server Error" });
+    res.status(500).json({ error: 'Server Error' });
   }
 });
+  
 
 //Route for DELETING book club by ID
-
 router.delete("/:id", async (req, res) => {
   try {
     const deletedBookClub = BookClub.destroy({

@@ -1,4 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/css/bookclub.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/js-datepicker/dist/datepicker.min.css">
+</head>
 
 {{!-- Replace this with info from db --}}
 <h1>{{bClub.name}}</h1>
@@ -70,14 +72,38 @@
         <h3>Upcoming Meetings</h3>
         <button class="button1" id="newMeeting">+ New Meeting</button>
     </div>
-    <div class="line-horizontal"></div>
+    <form id="myForm">
+        <div class="form-field">
+            <label for="date">Date:</label>
+            <input type="text" id="date" name="date" required>
+        </div>
+        <div class="form-field">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+        <div class="form-field">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+        </div>
+        <div class="form-field">
+            <label for="chapter">Book Chapter:</label>
+            <input type="text" id="chapter" name="chapter" required>
+        </div>
+        <div class="form-field">
+            <button class="button1" type="submit">Submit</button>
+        </div>
+    </form>
+
+    <div id="meetingInfo"></div>
+  
+
 
 {{!-- This should be recreated for #each meeting --}}
-    <p><strong>Date: </strong> Tuesday, July 30, 2024</p>
+    {{!-- <p><strong>Date: </strong> Tuesday, July 30, 2024</p>
     <p><strong>Time: </strong>2:00 pm</p>
     <p><strong>Location: </strong>Adam's house</p>
     <p><strong>Book: </strong>"Eloquent JavaScript, Second Edition"</p>
-    <p><strong>Read to: </strong>chapter 4</p>
+    <p><strong>Read to: </strong>chapter 4</p> --}}
     {{!-- <div class="spacer"></div> --}}
     {{!-- <button class="button1">Edit Meeting</button> --}}
     <div class="line-horizontal"></div>
@@ -96,6 +122,7 @@
   </section> --}}
 
 </section>
-
+<script src="https://cdn.jsdelivr.net/npm/js-datepicker"></script>
 <script src="/js/bookclub.js"></script>
 <script src="/js/getabook.js"></script>
+<script src="/js/newMeeting.js"></script>
