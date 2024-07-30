@@ -23,6 +23,9 @@ Navigate to https://group-8-project.onrender.com/ and create a user. Once create
 Hannah Schwen, Stephan Kwapis, Cesar Castro, Selena Pixton, Adam Orf
 
 # Visuals/Links
+<img src="./public/images/profile.png">
+<img src="./public/images/meeting.png">
+<img src="./public/images/bookclub.png">
 https://group-8-project.onrender.com/ 
 
 # License
@@ -32,8 +35,8 @@ MIT
 Testing was completed using Insomnia and console logs.
 
 # Questions
-Adam’s github - https://github.com/stump297/
-Hannah’s github: https://github.com/hannahschwen
-Selena’s github: https://github.com/selenapix
-Stephan’s github: https://github.com/sdkwapis
+Adam’s github - https://github.com/stump297/ <br>
+Hannah’s github: https://github.com/hannahschwen <br>
+Selena’s github: https://github.com/selenapix <br>
+Stephan’s github: https://github.com/sdkwapis <br>
 Cesar’s github: https://github.com/cj4871
