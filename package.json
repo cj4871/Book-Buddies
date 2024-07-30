@@ -8,7 +8,7 @@
     "dev": "nodemon server.js",
     "start": "node server.js",
     "seeds": "node seeds/seeds.js", 
-    "db:build": "node ./src/backend/seed.js",
+    "db:build": "node ./seed.js",
 
   },
   "keywords": [],
