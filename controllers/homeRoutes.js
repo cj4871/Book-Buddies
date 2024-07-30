@@ -40,22 +40,17 @@ router.get('/bookclub/:id', async (req, res) => {
     const bookClub = await BookClub.findByPk(req.params.id);
     let bClub  = bookClub.get({ plain: true})
 
-    const bookClubData = await BookClub.findByPk(req.params.id, { include: [{ model: Book }]});
+    const bookClubData = await BookClub.findByPk(req.params.id, {
+      include: [{  model: Book }]
+      })
 
-    let clubBooks = bookClubData.Books.map((book) => {book.get({ plain: true })});
+      const books  = bookClubData.Books.map((book) => book.get({ plain: true}))
 
-    // const bookClubData = await BookClub.findAll()
-    // const bookClubs = bookClubData.map((bookClub) => bookClub.get({ plain: true}))
-
-    res.render('bookclub', { bClub, clubBooks });
-
-
-
+    res.render('bookclub', {bClub, books});
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server Error" });
   }
-  // res.render('bookclub');
  })
 
  module.exports = router;
