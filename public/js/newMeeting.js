@@ -93,7 +93,7 @@ function fetchMeetings() {
                         <p><span>Date:</span> ${formattedDate}</p>
                         <p><span>Time:</span> ${formattedTime}</p>
                         <p><span>Location:</span> ${meeting.location}</p>
-                        <p><span>Book Title/Book Chapter:</span> ${
+                        <p><span>Book Chapter:</span> ${
                           meeting.book_chapter || "N/A"
                         }</p>
                     `;
