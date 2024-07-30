@@ -42,13 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Getting the values from the form
     const clubNameInput = document.getElementById("clubName").value;
-    const membersInput = document.getElementById("members").value;
     const descriptionInput = document.getElementById("description").value;
-
-    //Trying to figure out why console says 'Members:undefined' and 'Description: undefined"
-    console.log("Club Name Input: ", clubNameInput);
-    console.log("Members Input: ", membersInput);
-    console.log("Description Input ", descriptionInput);
 
     //New Club Container
     const newClubContainer = document.createElement("div");
@@ -58,11 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const groupInfo = document.createElement("h3");
     groupInfo.textContent = clubNameInput;
     newClubContainer.appendChild(groupInfo);
-
-    //New Member names
-    const membersInfo = document.createElement("p");
-    membersInfo.textContent = `Members: ${membersInput}`;
-    newClubContainer.appendChild(membersInfo);
 
     //New Description info
     const descriptionInfo = document.createElement("p");
