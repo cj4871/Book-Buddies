@@ -1,15 +1,17 @@
 const router = require("express").Router();
-const { BookClub } = require("../../models");
+const { BookClub, Book } = require("../../models");
 
-//test route
+// api/bookclubs route
 router.get("/", async (req, res) => {
-  res.send(`You're on controllers/api/bookclubs`);
-});
-
-//Route to FETCH book clubs from the DB
-router.get("/all", async (req, res) => {
   try {
-    const bookClubs = await BookClub.findAll();
+    const bookClubs = await BookClub.findAll({
+      include: [
+        {
+          model: Book
+        }
+      ]
+    }
+    );
     res.json(bookClubs);
   } catch (err) {
     console.error(err);
