@@ -40,6 +40,13 @@
 }
 
 /* Book card styles -------------- */
+
+#savedBooksDisplay {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
 .book-card {
   background-color: var(--light);
   width: 200px;
@@ -68,19 +75,36 @@
   height: auto;
 }
 
-.button1{
-  background-color: rgb(252, 205, 119);
+#newMeeting{
+  background-color: rgb(247, 198, 206);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 47px;
+}
+
+#newMeeting:hover{
+  background-color:rgb(241, 170, 182); 
+}
+
+#search-form{
+  background-image: linear-gradient(rgb(203, 172, 242), rgb(132, 236, 236)) ;
+  border-radius: 20px;
+  padding: 25px;
 }
 
 #searchbutton {
-  background-color: #66d0ce;
-  color: white;
+  background-color: rgb(241, 170, 182);
+  color: rgb(37, 37, 37);
   padding: 8px 40px;
+  display: flex;
+  margin-left: 80px;
+  margin-top: 13px;
 }
 
 #searchbutton:hover{
   transition: 0.4s;
-  background-color: #4fa2a1;
+  background-color:rgb(246, 148, 164); 
 }
 
 #savedBooksDisplay {
@@ -131,6 +155,10 @@
 #myForm {
   display: none;
   margin-top: 20px;
+  background-image: linear-gradient(rgb(203, 172, 242), rgb(132, 236, 236));
+  padding: 30px;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 .form-field {
@@ -156,8 +184,18 @@
   margin-bottom: 10px;
 }
 
-.form-field-submit button {
+.button1 {
   padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 5px;
+  background-color: rgb(247, 198, 206);
+  }
+
+.button1:hover {
+  background-color:rgb(241, 170, 182); 
 }
 
 #meetingInfo {
