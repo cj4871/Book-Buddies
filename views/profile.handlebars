@@ -9,16 +9,18 @@
 
 {{!-- section for tabs/books --}}
 <section class="clubs-section-container">
-  <div class="clubs-title"><h3>My Book Clubs</h3></div>
+  <div class="clubs-title"><h3>Book Clubs</h3></div>
   <section class="clubs-section shadow1">
 
     {{!-- Template --}}
-<template id="bookClubTemplate">
+{{!-- <template id="bookClubTemplate">
   <div class="club-container">
     <h3></h3>
     <p class="members"></p>
   </div>
-</template>
+</template> --}}
+
+
 
 {{!-- Here's an example club card to be recreated for each club the user is a part of --}}
     {{#each bookClubs as |bookClub|}}
@@ -30,7 +32,8 @@
     </a>
     {{/each}}
   
-
+  <button id="start-new-bc-btn">Start a New Book Club</button>
+  
 {{!-- 
       <div class="club-container">
       <h3>Group Name</h3>
@@ -56,10 +59,10 @@
   
 </section>
 
-<div class="button-container">
+{{!-- <div class="button-container">
   <button id = "club-search-btn">Join a Book Club</button>
   <button id="start-new-bc-btn">Start a New Book Club</button>
-</div>
+</div> --}}
 
 <div id="book-club-search">
   <input type="text" id="search-input" placeholder="Search for Book Clubs">

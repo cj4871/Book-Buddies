@@ -34,21 +34,26 @@ main {
   cursor: pointer;
 }
 
-.button-container {
+.clubs-section a {
+  margin: 0px;
+}
+
+/* .button-container {
   display: flex;
   flex-direction: column;
   padding-top: 40px;
-}
+} */
 
-.button-container button {
+button {
   background-color: var(--gray-mid);
   font-size: 18px;
-  height: 160px;
-  width: 160px;
+  /* height: 160px; */
+  /* width: 160px; */
   margin: 10px;
   border-radius: 36px;
+  padding: 4px 16px;
 }
 
-.button-container button:hover {
+button:hover {
   background-color: var(--teal2);
 }
