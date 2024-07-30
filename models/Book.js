@@ -36,24 +36,32 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    author: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    bookclub_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'BookClub',
+        key: 'id',
+      }
     },
-    // commented out genre because it was breaking the route, can add it back later
-    // genre: {
+  
+    // author: {
     //   type: DataTypes.STRING,
     //   allowNull: false,
     // },
-    publication_year: {
-      type: DataTypes.INTEGER,
-    },
-    user_rating:{
-      type: DataTypes.INTEGER,
-    },
-    ranking: {
-      type: DataTypes.FLOAT,
-    },
+    // // commented out genre because it was breaking the route, can add it back later
+    // // genre: {
+    // //   type: DataTypes.STRING,
+    // //   allowNull: false,
+    // // },
+    // publication_year: {
+    //   type: DataTypes.INTEGER,
+    // },
+    // user_rating:{
+    //   type: DataTypes.INTEGER,
+    // },
+    // ranking: {
+    //   type: DataTypes.FLOAT,
+    // },
   },
 {
   sequelize,
