@@ -3,7 +3,7 @@
 </head>
 
 {{!-- Replace this with info from db --}}
-<h1>{{name}}</h1>
+<h1>{{bClub.name}}</h1>
 
 {{!-- added a leave button to remove the user from the group --}}
 {{!-- <button  id="leave_btn">Leave Group</button> --}}
@@ -11,7 +11,7 @@
 
 
 {{!-- <p><strong>Members: </strong> Adam, Selena, Stephan, CJ, Hannah</p> --}}
-<p><strong>Description: </strong>{{description}}</p>
+<p><strong>Description: </strong>{{bClub.description}}</p>
 <div class="spacer"></div>
 
 {{!-- <button class="button1">Edit Details</button> --}}
@@ -37,6 +37,14 @@
     </form>
    </div>
    <div class="line-horizontal"></div>
+
+
+{{#each books as |book|}}
+<h1>
+  {{book.title}}
+</h1>
+{{/each}}
+
 
 
   <div id="detailsDisplay">
