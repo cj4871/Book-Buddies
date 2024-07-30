@@ -128,4 +128,54 @@
   background-color: rgb(236, 168, 42);
 }
 
+#myForm {
+  display: none;
+  margin-top: 20px;
+}
 
+.form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  width: 150px; 
+  margin-right: 10px;
+  text-align: right; 
+}
+
+.form-field input {
+  flex: 1;
+  padding: 5px;
+}
+
+.form-field-submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.form-field-submit button {
+  padding: 10px 20px;
+}
+
+#meetingInfo {
+  margin-top: 20px;
+}
+
+.meeting {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.meeting p {
+  margin: 10px 0;
+}
+
+.meeting p span {
+  font-weight: bold;
+}
