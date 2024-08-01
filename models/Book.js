@@ -19,7 +19,7 @@ Book.init(
   },
 {
   sequelize,
-  modelName: 'Book',
+  modelName: 'book',
   timestamps: false,
   }
 );

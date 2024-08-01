@@ -23,8 +23,10 @@ User_Club.init(
   },
 {
   sequelize,
-  modelName: 'Book',
   timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'user_club'
   }
 );
 

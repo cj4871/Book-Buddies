@@ -15,16 +15,26 @@ Book_Club.init(
     club_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'club',
+        key: 'id'
+      }
     },
     book_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'book',
+        key: 'id'
+      }
     }
   },
 {
   sequelize,
-  modelName: 'Book',
   timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'book_club'
   }
 );
 

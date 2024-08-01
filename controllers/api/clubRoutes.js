@@ -1,18 +1,13 @@
 const router = require("express").Router();
-const { BookClub, Book } = require("../../models");
+const { Club, Book } = require("../../models");
 
 // api/bookclubs route
 router.get("/", async (req, res) => {
   try {
-    const bookClubs = await BookClub.findAll({
-      include: [
-        {
-          model: Book
-        }
-      ]
-    }
-    );
-    res.json(bookClubs);
+    const clubData = await Club.findAll({
+      include: [{model:Book, attributes: ['title']}]
+    });
+    res.json(clubData);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server Error" });
@@ -21,8 +16,8 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const bookClub = await BookClub.findByPk(req.params.id);
-    res.json(bookClub);
+    const clubData = await BookClub.findByPk(req.params.id);
+    res.json(clubData);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server Error" });

@@ -1,13 +1,13 @@
 const router = require("express").Router();
 const userRoutes = require("./userRoutes");
 const bookRoutes = require("./bookRoutes");
-const bookclubRoutes = require("./bookclubRoutes");
+const clubRoutes = require("./clubRoutes");
 const meetingRoutes = require("./meetingRoutes");
 // const newBookClubRoutes = require("./newBookClubRoutes");
 
 router.use("/users", userRoutes);
 router.use("/book", bookRoutes);
-router.use("/bookclubs", bookclubRoutes);
+router.use("/clubs", clubRoutes);
 router.use("/meetings", meetingRoutes);
 router.use('/savebook', bookRoutes);
 router.use('/savedbooks', bookRoutes);
