@@ -24,21 +24,14 @@ Meeting.init(
       type: DataTypes.TIME,
       allowNull: false,
     },
-    book_chapter: {
-      type: DataTypes.INTEGER,
+    meeting_topic: {
+      type: DataTypes.STRING,
     },
 
-    // BookClub_id: {
+    // Club_id: {
     //     type: DataTypes.INTEGER,
     //     references: {
-    //         model: 'BookClub',
-    //         key: 'id',
-    //     },
-    // },
-    // Book_id:{
-    //     type: DataTypes.INTEGER,
-    //     references: {
-    //         model: 'book',
+    //         model: 'Club',
     //         key: 'id',
     //     },
     // },

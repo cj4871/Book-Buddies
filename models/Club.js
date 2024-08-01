@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class BookClub extends Model {}
+class Club extends Model {}
 
-BookClub.init(
+Club.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -19,14 +19,17 @@ BookClub.init(
     description: {
       type: DataTypes.STRING,
     },
+    // meetings_id: {
+    //   type: DataTypes.INTEGER
+    // }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "BookClub",
+    modelName: "Club",
   }
 );
 
-module.exports = BookClub;
+module.exports = Club;
