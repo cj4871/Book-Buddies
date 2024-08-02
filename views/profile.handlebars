@@ -47,14 +47,14 @@
   </section>
   
 {{!-- New Club Form --}}
-  <form id="newClubForm" style="display: none;">
+  <form id="newClubForm" style="display: block;">
     <label for="clubName">Club Name</label>
-    <input type="text" id="clubName" name= "clubName" placeholder="Club Name" required>
+    <input type="text" id="newClubName" name= "clubName" placeholder="Club Name" required>
 
     <label id="description" for="description">Description</label>
-    <input name="description" id="description" placeholder="Description" required></input>
+    <input name="description" id="newClubDescription" placeholder="Description" required></input>
   
-    <button class="new-book-club-btn" type="submit">Create New Book Club</button>
+    <button id="addBookClubBtn" class="new-book-club-btn" type="submit">Create New Book Club</button>
   </form>
   
 </section>
@@ -64,9 +64,9 @@
   <button id="start-new-bc-btn">Start a New Book Club</button>
 </div> --}}
 
-<div id="book-club-search">
+{{!-- <div id="book-club-search">
   <input type="text" id="search-input" placeholder="Search for Book Clubs">
   <button id="search-button">Search</button>
-</div>
+</div> --}}
 
 <script src="./js/profile.js"></script>

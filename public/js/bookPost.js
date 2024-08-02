@@ -4,7 +4,7 @@ const addBook = document.getElementById('addBook')
 
 async function bookHandler(event) {
     event.preventDefault()
-    
+    const clubIdArray = event.target.classList[1].split(':')
     const title = document.getElementById('addBook-bar').value;
     if (title == "") {
         window.alert("Please, add a Book to add, before trying to add nothing, you dummy");
@@ -20,19 +20,12 @@ async function bookHandler(event) {
         });
         // document.location.replace('/employee');
         window.alert("Book Successfully added");
-        bookRelations()
+        const book = await response.json()
+        bookRelations(book.id, clubIdArray[1])
     }
 }
 
-async function bookRelations() {
-    const responseBook = await fetch(`../api/book`);
-    let json = await responseBook.json()
-    let bookId = json[json.length - 1].id
-
-    const queryString = window.location.pathname
-    let stringArray = queryString.split('/')
-    const clubId = stringArray[2]
-
+async function bookRelations(bookId, clubId) {
     const response = await fetch(`../api/bookclub`, {
         method: 'POST',
         body: JSON.stringify({

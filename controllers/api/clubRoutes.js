@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const clubData = await BookClub.findByPk(req.params.id);
+    const clubData = await Club.findByPk(req.params.id);
     res.json(clubData);
   } catch (err) {
     console.error(err);
@@ -26,13 +26,8 @@ router.get("/:id", async (req, res) => {
 
 //Route for creating NEW book club by ID
 router.post('/', async (req, res) => {
-  const { clubName, description } = req.body;
-
-  if (!clubName || !description) {
-    return res.status(400).json({ error: 'Club Name and Description are required' });
-  }
   try {
-    const newBookClub = await BookClub.create({ clubName, description });
+    const newBookClub = await Club.create(req.body);
     res.status(201).json(newBookClub);
   } catch (err) {
     console.error(err);
@@ -44,7 +39,7 @@ router.post('/', async (req, res) => {
 //Route for DELETING book club by ID
 router.delete("/:id", async (req, res) => {
   try {
-    const deletedBookClub = BookClub.destroy({
+    const deletedBookClub = Club.destroy({
       where: { id: req.params.id },
     });
 
