@@ -15,10 +15,18 @@ User_Club.init(
     club_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'club',
+        key: 'id'
+      }
     },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     }
   },
 {

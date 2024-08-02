@@ -28,7 +28,7 @@ Club.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Club",
+    modelName: "club",
   }
 );
 

@@ -2,52 +2,52 @@ const { Book_Club } = require('../models');
 
 const BookClubData = [
   {
-    club_id: 1,
-    book_id: 6,
+    clubId: 1,
+    bookId: 6,
   },
   {
-    club_id: 1,
-    book_id: 7,
+    clubId: 1,
+    bookId: 7,
   },
   {
-    club_id: 1,
-    book_id: 8,
+    clubId: 1,
+    bookId: 8,
   },
   {
-    club_id: 2,
-    book_id: 6,
+    clubId: 2,
+    bookId: 6,
   },
   {
-    club_id: 3,
-    book_id: 1,
+    clubId: 3,
+    bookId: 1,
   },
   {
-    club_id: 3,
-    book_id: 3,
+    clubId: 3,
+    bookId: 3,
   },
   {
-    club_id: 3,
-    book_id: 4,
+    clubId: 3,
+    bookId: 4,
   },
   {
-    club_id: 3,
-    book_id: 5,
+    clubId: 3,
+    bookId: 5,
   },
   // {
-  //   club_id: 4,
-  //   book_id: 1,
+  //   clubId: 4,
+  //   bookId: 1,
   // },
   // {
-  //   club_id: 4,
-  //   book_id: 2,
+  //   clubId: 4,
+  //   bookId: 2,
   // },
   // {
-  //   club_id: 4,
-  //   book_id: 8,
+  //   clubId: 4,
+  //   bookId: 8,
   // },
   // {
-  //   club_id: 5,
-  //   book_id: 3,
+  //   clubId: 5,
+  //   bookId: 3,
   // },
 ];
 

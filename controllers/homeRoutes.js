@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, BookClub, Book } = require('../models');
+const { User, Club, Book } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
@@ -20,13 +20,13 @@ router.get('/profile', withAuth, async (req, res) => {
       // do I need to include a model here?
     });
 
-    const bookClubData = await BookClub.findAll()
-    const bookClubs = bookClubData.map((bookClub) => bookClub.get({ plain: true}))
+    const ClubData = await Club.findAll()
+    const Clubs = ClubData.map((Club) => Club.get({ plain: true}))
 
     const user = userData.get({ plain: true });
 
     res.render('profile', {
-      bookClubs,
+      Clubs,
       ...user,
       logged_in: true
     });
@@ -37,20 +37,37 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/bookclub/:id', async (req, res) => {
   try {
-    const bookClub = await BookClub.findByPk(req.params.id);
-    let bClub  = bookClub.get({ plain: true})
+    const bClubData = await Club.findByPk(req.params.id);
+    let bookClub  = bClubData.get({ plain: true})
 
-    const bookClubData = await BookClub.findByPk(req.params.id, {
+    const bookClubData = await Club.findByPk(req.params.id, {
       include: [{  model: Book }]
       })
 
-      const books  = bookClubData.Books.map((book) => book.get({ plain: true}))
+      const books  = bookClubData.books.map((book) => book.get({ plain: true}))
 
-    res.render('bookclub', {bClub, books});
+    res.render('bookclub',
+       {
+        bookClub,
+         books
+        });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server Error" });
   }
  })
+
+//  router.post("/bookclub/:id", async (req, res) => {
+//   try {
+//     const bookClubData = await Book_Club.create({
+//       clubId: req.params.clubId,
+//       bookId: req.body.bookId,
+//     });
+//     res.status(200).json(bookClubData);
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
  module.exports = router;

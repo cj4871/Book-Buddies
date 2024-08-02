@@ -20,10 +20,11 @@ router.post("/", async (req, res) => {
   try {
     const newBook = await Book.create({
       title: req.body.title,
-      author: req.body.author,
-      publication_year: req.body.publication_year,
+      // author: req.body.author,
+      // publication_year: req.body.publication_year,
       // genre: req.body.genre, 
     });
+
     res.status(200).json(newBook);
   } catch (err) {
     console.log(err);

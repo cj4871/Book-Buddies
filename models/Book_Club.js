@@ -12,7 +12,7 @@ Book_Club.init(
       primaryKey: true,
       autoIncrement: true,
     },  
-    club_id: {
+    clubId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -20,7 +20,7 @@ Book_Club.init(
         key: 'id'
       }
     },
-    book_id: {
+    bookId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {

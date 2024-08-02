@@ -1,9 +1,7 @@
-<link rel="stylesheet" type="text/css" href="/css/bookclub.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/js-datepicker/dist/datepicker.min.css">
-</head>
+
 
 {{!-- Replace this with info from db --}}
-<h1>{{bClub.name}}</h1>
+<h1>{{bookClub.name}}</h1>
 
 {{!-- added a leave button to remove the user from the group --}}
 {{!-- <button  id="leave_btn">Leave Group</button> --}}
@@ -11,7 +9,7 @@
 
 
 {{!-- <p><strong>Members: </strong> Adam, Selena, Stephan, CJ, Hannah</p> --}}
-<p><strong>Description: </strong>{{bClub.description}}</p>
+<p><strong>Description: </strong>{{bookClub.description}}</p>
 <div class="spacer"></div>
 
 {{!-- <button class="button1">Edit Details</button> --}}
@@ -32,8 +30,8 @@
     <div class="center-flex-column">
         <h3>Add a book to the club library</h3>
         <form id="search-form">
-        <input type="text" id="search-bar" placeholder="Enter book title">
-        <button id="searchbutton" class="button1" type="submit">Search</button>
+        <input type="text" id="addBook-bar" placeholder="Enter book title">
+        <button id="addBook" class="button1" type="submit">Search</button>
     </form>
    </div>
    <div class="line-horizontal"></div>
@@ -124,6 +122,7 @@
 
 </section>
 <script src="https://cdn.jsdelivr.net/npm/js-datepicker"></script>
-<script src="/js/bookclub.js"></script>
-<script src="/js/getabook.js"></script>
-<script src="/js/newMeeting.js"></script>
+<script src="/js/bookPost.js"></script>
+{{!-- <script src="/js/bookclub.js"></script> --}}
+{{!-- <script src="/js/getabook.js"></script> --}}
+{{!-- <script src="/js/newMeeting.js"></script> --}}

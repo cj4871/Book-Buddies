@@ -15,6 +15,9 @@ Club.belongsToMany(Book, {
     through: Book_Club
 })
 
+Club.belongsToMany(User, {
+    through: User_Club
+})
 
 
 module.exports = { User, Book, Club, Meeting, Book_Club, User_Club };
