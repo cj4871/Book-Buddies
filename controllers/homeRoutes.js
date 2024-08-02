@@ -20,13 +20,13 @@ router.get('/profile', withAuth, async (req, res) => {
       // do I need to include a model here?
     });
 
-    const ClubData = await Club.findAll()
+    const ClubData = await Club.findAll( {include: [{model: user}]})
     const Clubs = ClubData.map((Club) => Club.get({ plain: true}))
 
     const user = userData.get({ plain: true });
 
     res.render('profile', {
-      Clubs,
+      git ,
       ...user,
       logged_in: true
     });

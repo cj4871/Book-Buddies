@@ -1,10 +1,11 @@
 const sequelize = require("../config/connection.js");
-const Book_Club = require("../models/Book_Club.js");
+// const Book_Club = require("../models/Book_Club.js");
 const seedBooks = require("./book_Seeds.js");
 const seedBookClubs = require("./BookClub_seeds.js");
-
 // const userData = require("./userData.json");
 const seedClubs = require("./clubData_seeds.js");
+const seedUsers = require("./user_seeds.js");
+const seedUserClubs = require("./UserClub_seeds.js");
 // const meetingData = require("./meetingData.json");
 
 
@@ -17,6 +18,10 @@ const seedAll = async () => {
   console.log('Books Seeded')
   await seedBookClubs()
   console.log('Books Clubs Seeded')
+  await seedUsers()
+  console.log('Users Seeded')
+  await seedUserClubs()
+  console.log('Users Clubs Seeded')
 
 
 

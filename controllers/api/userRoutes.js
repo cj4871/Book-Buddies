@@ -2,12 +2,14 @@
 
 const router = require("express").Router();
 // Import the user model, which is in the models folder.
-const { User } = require("../../models");
+const { User, Club } = require("../../models");
 
 //get request finding all users
 router.get("/", async (req, res) => {
   try {
-    const users = await User.findAll();
+    const users = await User.findAll({
+      include: [{model: Club}]
+    });
     res.json(users);
     //getting all users
   } catch (err) {

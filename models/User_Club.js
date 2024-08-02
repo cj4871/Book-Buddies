@@ -8,11 +8,12 @@ User_Club.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      // defaultValue: UUIDV4,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },  
-    club_id: {
+    clubId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -20,8 +21,8 @@ User_Club.init(
         key: 'id'
       }
     },
-    user_id: {
-      type: DataTypes.INTEGER,
+    userId: {
+      type: DataTypes.UUID,
       allowNull: false,
       references: {
         model: 'user',
