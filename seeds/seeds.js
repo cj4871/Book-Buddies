@@ -4,6 +4,7 @@ const seedBooks = require("./book_Seeds.js");
 const seedBookClubs = require("./BookClub_seeds.js");
 // const userData = require("./userData.json");
 const seedClubs = require("./clubData_seeds.js");
+const seedMeetings = require("./meeting_seeds.js");
 const seedUsers = require("./user_seeds.js");
 const seedUserClubs = require("./UserClub_seeds.js");
 // const meetingData = require("./meetingData.json");
@@ -13,16 +14,17 @@ const seedAll = async () => {
   await sequelize.sync({ force: true });
 
   await seedClubs()
-  console.log('Clubs Seeded')
+  console.log('---Clubs Seeded---')
   await seedBooks()
-  console.log('Books Seeded')
+  console.log('---Books Seeded---')
   await seedBookClubs()
-  console.log('Books Clubs Seeded')
+  console.log('---Books Clubs Seeded---')
   await seedUsers()
-  console.log('Users Seeded')
+  console.log('---Users Seeded---')
   await seedUserClubs()
-  console.log('Users Clubs Seeded')
-
+  console.log('---Users Clubs Seeded---')
+  await seedMeetings()
+  console.log('---Club Meetings Seeded---')
 
 
   // does not work

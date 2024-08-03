@@ -1,5 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+const Club = require("./Club");
+
 
 class Meeting extends Model {}
 
@@ -27,21 +29,20 @@ Meeting.init(
     meeting_topic: {
       type: DataTypes.STRING,
     },
-
-    // Club_id: {
-    //     type: DataTypes.INTEGER,
-    //     references: {
-    //         model: 'Club',
-    //         key: 'id',
-    //     },
-    // },
+    club_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'club',
+            key: 'id',
+        },
+    },
   },
   {
     sequelize,
-    modelName: "Meeting",
+    modelName: "meeting",
     freezeTableName: true,
     underscored: true,
-    timestamps: true,
+    timestamps: false,
   }
 );
 

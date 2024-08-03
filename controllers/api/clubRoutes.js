@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Club, Book, User } = require("../../models");
+const { Club, Book, User, Meeting } = require("../../models");
 
 // api/bookclubs route
 router.get("/", async (req, res) => {
@@ -7,7 +7,8 @@ router.get("/", async (req, res) => {
     const clubData = await Club.findAll({
       include: [
         {model:Book, attributes: ['title']},
-        {model:User, attributes: ['name', 'email']}
+        {model:User, attributes: ['name', 'email']},
+        {model:Meeting}
       
       ]
     });

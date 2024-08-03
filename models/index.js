@@ -23,5 +23,9 @@ User.belongsToMany(Club, {
     through: User_Club
 })
 
+Club.hasMany(Meeting, {
+    foreignKey: 'club_id'
+})
+
 
 module.exports = { User, Book, Club, Meeting, Book_Club, User_Club };
